@@ -1,0 +1,27 @@
+UnitId, --单位ID
+UnitName,--单位名称
+ProjectId,--项目ID
+SubUnitQualityId, --分包资质主键
+SubUnitQualityName,--分包资质名称
+BusinessLicense, --营业执照
+BL_EnableDate  --有效期
+BL_ScanUrl --附件
+Certificate, --资质证书
+ C_EnableDate --有效期
+ C_ScanUrl  --附件
+QualityLicense,质量体系认证证书
+ QL_EnableDate 质量体系认证证书有效期
+QL_ScanUrl 附件
+
+HSELicense,HSE体系认证证书（环保）
+ H_EnableDate HSE体系认证证书有效期
+H_ScanUrl 附件
+
+HSELicense2, 	 HSE体系认证证书(健康)
+H_EnableDate2e 有效期
+H_ScanUrl2 附件
+
+SecurityLicense, 安全生产许可证
+SL_EnableDate 安全生产许可证有效期
+SL_ScanUrl 附件
+

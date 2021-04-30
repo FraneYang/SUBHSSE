@@ -1,0 +1,11 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\bin\Debug\UploadCardVB.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\bin\Debug\UploadCardVB.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\bin\Debug\UploadCardVB.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.vbprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.UploadCard.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCardVB\obj\Debug\UploadCardVB.pdb

@@ -1,0 +1,9 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\bin\Debug\OpenDoor.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\bin\Debug\OpenDoor.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.Form1.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoor\obj\Debug\OpenDoor.pdb

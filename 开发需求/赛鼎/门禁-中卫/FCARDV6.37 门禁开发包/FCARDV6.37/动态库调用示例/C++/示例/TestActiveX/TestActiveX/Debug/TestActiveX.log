@@ -1,0 +1,5 @@
+﻿  TestActiveXDlg.cpp
+d:\fcard\二次开发文档\一卡通开发包_2017年11月20日\动态库调用示例\c++\调用fcdrive8800.dll\testactivex\testactivex\testactivexdlg.cpp(174): warning C4244: “参数”: 从“long”转换到“short”，可能丢失数据
+d:\fcard\二次开发文档\一卡通开发包_2017年11月20日\动态库调用示例\c++\调用fcdrive8800.dll\testactivex\testactivex\testactivexdlg.cpp(217): warning C4018: “<=”: 有符号/无符号不匹配
+  TestActiveX.vcxproj -> D:\fcard\二次开发文档\一卡通开发包_2017年11月20日\动态库调用示例\C++\调用FCDrive8800.Dll\TestActiveX\Debug\TestActiveX.exe
+  TestActiveX.vcxproj -> D:\fcard\二次开发文档\一卡通开发包_2017年11月20日\动态库调用示例\C++\调用FCDrive8800.Dll\TestActiveX\Debug\TestActiveX.pdb (Full PDB)

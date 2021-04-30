@@ -1,0 +1,2 @@
+ALTER TABLE Law_RulesRegulations ALTER COLUMN ApplicableScope NVARCHAR(2000) NULL
+GO

@@ -1,0 +1,64 @@
+技术上：
+1、消息推送。（消息服务、发短信）
+2、人脸识别、拍照。
+3、百度地图接口。
+4、gps 定位。
+
+业务上：
+1、巡检抄送 责任领导。
+3、
+
+
+工程暂停令 编号不用填
+
+作业票定稿：申请单位、作业证类型、开始时间、结束时间、作业区域、状态
+
+列表：getLicenseDataList strMenuId='0E9B7084-D021-4CA3-B9D2-9CBAA27A571B'
+状态(0-待提交；1-审核中；2-作业中；3-已关闭；-1已取消；-2作废)
+详细：getLicenseDataById
+
+一般来文
+FileType 0-项目发文；1-公司来文。
+
+States：状态【全部、待提交、已提交、已回复】 0待提交；1-已提交；2：已回复。
+api  ReceiveFileManagerController --》 【获取详细信息】getReceiveFileManagerById(string receiveFileManagerId, string fileType)；【获取列表】getReceiveFileManagerList(string projectId, string fileType, string unitId, string states, int pageIndex)；【保存】SaveReceiveFileManager([FromBody] Model.ReceiveFileManagerItem newItem)；【回复】getSaveReplyFileAttachUrl(string receiveFileManagerId, string attachUrl)
+
+
+专项检查
+检查类型：BaseInfoController ->  getProjectCheckItemSet(string projectId, string checkType, string supCheckItem)
+检查明细内容：BaseInfoController ->  getProjectCheckItemDetails(string type)
+处理措施：BaseInfoController ->  getHandleStep()
+
+附件文件夹：FileUpload/CheckSpecial
+
+CheckSpecialController -->getCheckSpecialById(string CheckSpecialId)获取专项检查详细信息、getCheckSpecialList(string projectId, string states, int pageIndex)获取专项检查列表信息、SaveCheckSpecial([FromBody] Model.CheckSpecialItem newItem)保存专项检查 Check_CheckSpecial、getCheckSpecialDetailById(string checkSpecialDetailId)获取专项检查明细项详细、SaveCheckSpecialDetail([FromBody] Model.CheckSpecialDetailItem newItem)保存专项检查明细项 Check_CheckSpecialDetail。
+
+
+SeDinMonthReportController 月报。
+获取列表getSeDinMonthReportList(string projectId,string month, string states, int pageIndex)。 其中month是查询条件的年月。
+点击记录 获取详细记录getSeDinMonthReportById(string monthReportId, string pageNum)。其中pageNum 表示页数，0封面；1项目信息；2项目安全工时统计...
+封面保存方法： SaveSeDinMonthReport0([FromBody] Model.SeDinMonthReportItem newItem)
+项目信息保存方法：SaveSeDinMonthReport1([FromBody] Model.SeDinMonthReport1Item newItem)
+项目安全工时统计保存方法：SaveSeDinMonthReport2([FromBody] Model.SeDinMonthReport2Item newItem)
+
+页面第一初始化：
+getSeDinMonthReportNullPage(string projectId, string month, string startDate, string endDate, string pageNum)。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

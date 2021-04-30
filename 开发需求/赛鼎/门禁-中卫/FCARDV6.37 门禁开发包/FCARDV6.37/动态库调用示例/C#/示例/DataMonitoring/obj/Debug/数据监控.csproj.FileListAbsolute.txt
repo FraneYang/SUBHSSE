@@ -1,0 +1,13 @@
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\DataMonitoring.exe.config
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\DataMonitoring.exe
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\DataMonitoring.pdb
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\数据监控.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\DataMonitoring.数据监控.resources
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\DataMonitoring.Properties.Resources.resources
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\数据监控.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\DataMonitoring.exe
+D:\fcard\二次开发文档\二次开发包\C#\示例\DataMonitoring\obj\Debug\DataMonitoring.pdb

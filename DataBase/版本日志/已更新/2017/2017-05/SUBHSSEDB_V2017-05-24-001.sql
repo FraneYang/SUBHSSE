@@ -1,0 +1,5 @@
+ALTER TABLE Technique_HazardListType ALTER COLUMN HazardListTypeName NVARCHAR(500) NULL
+GO
+ALTER TABLE Technique_HazardList ALTER COLUMN ControlMeasures NVARCHAR(500) NULL
+GO
+

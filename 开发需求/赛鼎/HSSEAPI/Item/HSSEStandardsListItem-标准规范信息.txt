@@ -1,0 +1,5 @@
+StandardId, 主键
+StandardGrade, 级别
+StandardNo,标准号
+StandardName, 名称
+AttachUrl 原文附件

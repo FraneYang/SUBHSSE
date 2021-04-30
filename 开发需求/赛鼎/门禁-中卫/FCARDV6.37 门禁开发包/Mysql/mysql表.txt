@@ -1,0 +1,4 @@
+torgan --单位
+tconsumer --人员
+tconsumerother --人员
+tfaceprivilege --权限

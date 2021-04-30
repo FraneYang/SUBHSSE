@@ -1,0 +1,4 @@
+DELETE FROM Sys_FlowOperate 
+WHERE DataId NOT IN ( SELECT ProjectStateId FROM Base_ProjectSate)
+AND MenuId='D24ACD3C-086C-4AC8-9AFA-16D48893215E'
+GO

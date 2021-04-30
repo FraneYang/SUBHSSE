@@ -1,0 +1,13 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\DataMonitoring.exe.config
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\DataMonitoring.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\DataMonitoring.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.Monitor.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\obj\Debug\DataMonitoring.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\DataMonitoring\bin\Debug\zh-Hans\System.Net.Http.resources.dll

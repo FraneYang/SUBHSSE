@@ -1,0 +1,74 @@
+SoftwareMode               '使用范围：1--办公室；2--小区；3--监狱；4--学校
+LanguageType               '语言；1--简体中文；2--繁体中文；3--英文。
+ElevatorType               '电梯门禁模式；1--电梯；2--柜锁；
+Auto_UpdateTime            '自动运行参数
+Auto_CheckState            '检查状态
+Auto_UpdateEqupt           '同步数据和提取记录
+Auto_LogToWatch            '登录到监控界面
+DoorRecordAuto             '自动读取门禁记录
+DoorRecordMode             '门禁记录提取方式；1--间隔分钟；2--间隔天数；3--当天的某个时间
+DoorRecordModeMinute       '门禁记录提取间隔的分钟
+DoorRecordModeDay          '门禁记录提取间隔的天数
+DoorRecordModeDayTime      '门禁记录提取间隔天数种的某个时间
+DoorRecordModeTime         '门禁记录提取每天的时间。
+DoorPeriod                 '门禁默认有效期
+DoorOpenTime               '门禁默认开锁时长
+DoorFireAlarm              '启用火警功能
+DoorNoRegCardAlarm         '启用非法卡报警功能
+DoorPasswordAlarm          '启用胁迫报警功能
+DoorPasswordAlarmPW        '胁迫报警的密码
+WorkReportAuto             '自动生成考勤报表
+WorkReportType             '自动生成考勤报表模式：1--当天的某个时间；2--间隔天数。
+WorkReportTypeDay          '自动生成考勤报表间隔的天数
+WorkReportTypeDayTime      '自动生成考勤报表隔天数种的某个时间
+WorkReportTypeTime         '门禁记录提取每天的时间。
+SaveUserLogDay             '操作员日期保存时长
+DoorRecordDelete           '是否允许删除开门记录
+WorkRecordDelete           '是否允许删除考勤报表
+AutoBackup                 '是否自动备份数据库
+BackupPath                 '自动备份数据库的文件目录
+NetBackup                  '是否自动上传备份文件
+NetBackupUserName          '网络备份终端用户名
+NetBackupPassword          '网络备份终端密码
+
+SysTel                     '电脑硬盘序列号
+SysTime                    '初次登陆时间
+CardDate                   '有效期
+SystemPort                 '设置密钥
+OpenTimeSp                 'SN
+
+CustomEventAlarm           '记录报警动作消息
+CustomEventButton 	       '记录按钮动作消息
+CustomEventDoorState       '记录门磁动作消息
+CustomEventRestart         '记录硬件复位消息
+CustomEventLog             '启用系统日志
+
+CustomGUIAutoLogin         '运行时自动登录系统
+CustomGUISystem            '显示“系统设置”界面
+CustomGUIDoorManage        '显示“门禁信息”界面
+CustomGUIWorkManage        '显示“考勤信息”界面
+CustomGUIPatrolManage      '显示“巡更信息”界面
+CustomGUIElevatorManage    '显示“电梯门禁”界面
+CustomGUIConference        '显示“会议签到”界面
+CustomGUILeftList          '显示“左侧导航”界面
+
+CustomDoorManageTimeGroup    '启用“开门时段”功能
+CustomDoorManagePassword     '启用“密码开门”功能
+CustomDoorManageCPassword    '启用“卡加密码”功能
+CustomDoorManageSoftwareOpen '启用“远程开门”功能
+CustomDoorManageEMap         '启用“电子地图”功能
+CustomDoorManageWatch        '启用“门禁监控”功能
+CustomCheckCardInOut         '启用“防潜返”  功能
+CustomDoorManage             '启用“定时任务”功能
+CustomLockInteraction        '启用“多门互锁”功能
+CustomMuchCardOpen           '启用“多卡开门”功能
+CustomFirstCardOpen          '启用“首卡开门”功能
+CustomPasswordAlarm          '启用“胁迫报警”功能
+CustomReaderCheck            '启用“内外读卡校验”功能
+CustomChanagePortState       '启用“读卡开再读关”功能
+CustomInputCardPassword      '启用“手动输入卡号+密码开门”功能
+
+AutoLoginUserName            '自动登录用户名
+AutoLoginUserPassword        '自动登录用户密码
+
+DoorConnPassword             '门禁默认通讯密码

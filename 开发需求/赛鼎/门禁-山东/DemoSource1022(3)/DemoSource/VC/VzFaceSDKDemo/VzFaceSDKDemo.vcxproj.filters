@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AddFaceDlg.cpp" />
+    <ClCompile Include="AlgorithmDlg.cpp" />
+    <ClCompile Include="BasicScreenDlg.cpp" />
+    <ClCompile Include="BasicsDlg.cpp" />
+    <ClCompile Include="BasicTimeDlg.cpp" />
+    <ClCompile Include="BasicUIDlg.cpp" />
+    <ClCompile Include="BasicVolDlg.cpp" />
+    <ClCompile Include="BatchDlg.cpp" />
+    <ClCompile Include="DlgJurChild.cpp" />
+    <ClCompile Include="DlgJurChildV.cpp" />
+    <ClCompile Include="FaceManagerDlg.cpp" />
+    <ClCompile Include="Fun_MangDlg.cpp" />
+    <ClCompile Include="Fun_SeniorsDlg.cpp" />
+    <ClCompile Include="Fun_SystemSetDlg.cpp" />
+    <ClCompile Include="InteractViewer.cpp" />
+    <ClCompile Include="JurSettingDlg.cpp" />
+    <ClCompile Include="LedTimeSetDlg.cpp" />
+    <ClCompile Include="SeniorDlg.cpp" />
+    <ClCompile Include="SeniorModeDlg.cpp" />
+    <ClCompile Include="SetPicFormatDlg.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SystemDevDlg.cpp" />
+    <ClCompile Include="SystemKeyDlg.cpp" />
+    <ClCompile Include="SystemSetDlg.cpp" />
+    <ClCompile Include="ThreadBasic.cpp" />
+    <ClCompile Include="VzFaceSDKDemo.cpp" />
+    <ClCompile Include="VzFaceSDKDemoDlg.cpp" />
+    <ClCompile Include="VzString.cpp" />
+    <ClCompile Include="VzTreeCtrl.cpp" />
+    <ClCompile Include="ButtonEx.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MyHeadCtrl.cc">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MyListCtrl.cc">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SeniorNetDlg.cpp" />
+    <ClCompile Include="SeniorWGDlg.cpp" />
+    <ClCompile Include="SeniorHttpDlg.cpp" />
+    <ClCompile Include="SystemTFDlg.cpp" />
+    <ClCompile Include="RecordInfoDlg.cpp" />
+    <ClCompile Include="DlgPicSavePath.cpp" />
+    <ClCompile Include="SeniorMQTTDlg.cpp" />
+    <ClCompile Include="SeniorspwgDlg.cpp" />
+    <ClCompile Include="SystemRebootInfoDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddFaceDlg.h" />
+    <ClInclude Include="AlgorithmDlg.h" />
+    <ClInclude Include="BasicScreenDlg.h" />
+    <ClInclude Include="BasicsDlg.h" />
+    <ClInclude Include="BasicTimeDlg.h" />
+    <ClInclude Include="BasicUIDlg.h" />
+    <ClInclude Include="BasicVolDlg.h" />
+    <ClInclude Include="BatchDlg.h" />
+    <ClInclude Include="DlgJurChild.h" />
+    <ClInclude Include="DlgJurChildV.h" />
+    <ClInclude Include="FaceManagerDlg.h" />
+    <ClInclude Include="Fun_MangDlg.h" />
+    <ClInclude Include="Fun_SeniorsDlg.h" />
+    <ClInclude Include="Fun_SystemSetDlg.h" />
+    <ClInclude Include="InteractViewer.h" />
+    <ClInclude Include="JurSettingDlg.h" />
+    <ClInclude Include="LedTimeSetDlg.h" />
+    <ClInclude Include="public.hpp" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SeniorDlg.h" />
+    <ClInclude Include="SeniorModeDlg.h" />
+    <ClInclude Include="SetPicFormatDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemDevDlg.h" />
+    <ClInclude Include="SystemKeyDlg.h" />
+    <ClInclude Include="SystemSetDlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadBasic.h" />
+    <ClInclude Include="VzDeviceLPR.h" />
+    <ClInclude Include="VzFaceSDKDemo.h" />
+    <ClInclude Include="VzFaceSDKDemoDlg.h" />
+    <ClInclude Include="VzString.h" />
+    <ClInclude Include="VzTreeCtrl.h" />
+    <ClInclude Include="ButtonEx.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MyHeadCtrl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MyListCtrl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SeniorNetDlg.h" />
+    <ClInclude Include="SeniorWGDlg.h" />
+    <ClInclude Include="SeniorHttpDlg.h" />
+    <ClInclude Include="SystemTFDlg.h" />
+    <ClInclude Include="RecordInfoDlg.h" />
+    <ClInclude Include="DlgPicSavePath.h" />
+    <ClInclude Include="SeniorMQTTDlg.h" />
+    <ClInclude Include="SeniorspwgDlg.h" />
+    <ClInclude Include="SystemRebootInfoDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VzFaceSDKDemo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\offline.bmp" />
+    <Image Include="res\online.bmp" />
+    <Image Include="res\VzFaceSDKDemo.ico" />
+    <Image Include="res\alarm.bmp" />
+    <Image Include="res\auto.bmp" />
+    <Image Include="res\del.bmp" />
+    <Image Include="res\edit.bmp" />
+    <Image Include="res\add.bmp" />
+    <Image Include="res\more.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\VzFaceSDKDemo.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{db48e27f-9529-4203-8a79-d8f1a6935493}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

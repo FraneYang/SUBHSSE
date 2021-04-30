@@ -1,0 +1,22 @@
+   public string PersonQualityId; //主键
+        public string PersonId; ///人员主键
+        public string CardNo; ///人员卡号
+        public string IdentityCard;///身份证号码
+        public string ProjectId; ///项目id
+        public string UnitId;//单位id
+        public string ProjectName; ///项目名称
+        public string ProjectCode; ///项目号
+        public string CertificateNo;///证书编号
+public string CertificateId; ///证书id
+        public string CertificateName;///证书名称
+        public string Grade; ///操作类别
+        public string SendUnit; //发证单位
+        public datetime? SendDate; ///发证日期
+        public datetime? LimitDate; ///有效期至
+        public datetime? LateCheckDate; ///复查日期
+        public string ApprovalPerson; ///审核人 
+        public string Remark; ///备注
+        public string CompileMan; ///编制人
+        public string CompileManName; ///编制人姓名
+        public datetime? CompileDate; ///编制日期
+        public string AuditDate; ///审核日期

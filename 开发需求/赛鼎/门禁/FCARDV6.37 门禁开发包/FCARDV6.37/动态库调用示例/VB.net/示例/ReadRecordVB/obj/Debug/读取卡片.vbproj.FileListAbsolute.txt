@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\ReadRecordVB.exe.config
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\ReadRecordVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\ReadRecordVB.pdb
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\ReadRecordVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\读取卡片.vbprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\ReadRecordVB.Resources.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\ReadRecordVB.读取卡片.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\读取卡片.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\ReadRecordVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\ReadRecordVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\ReadRecordVB\obj\Debug\ReadRecordVB.pdb

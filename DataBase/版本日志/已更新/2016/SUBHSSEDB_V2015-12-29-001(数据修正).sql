@@ -1,0 +1,25 @@
+-- 根据子公司情况手动 清空所有报表数据
+
+--职工伤亡事故原因分析报表
+DELETE FROM Information_AccidentCauseReportItem
+GO
+DELETE FROM Information_AccidentCauseReport
+GO
+--应急演练开展情况季报明细表
+DELETE FROM Information_DrillConductedQuarterlyReportItem
+GO
+DELETE FROM Information_DrillConductedQuarterlyReport
+GO
+--应急演练工作计划半年报表
+DELETE FROM Information_DrillPlanHalfYearReportItem
+GO
+DELETE FROM Information_DrillPlanHalfYearReport
+GO
+--百万工时安全统计月报表
+DELETE FROM Information_MillionsMonthlyReportItem
+GO
+DELETE FROM Information_MillionsMonthlyReport
+GO
+--安全生产数据季报表
+DELETE FROM Information_SafetyQuarterlyReport
+GO

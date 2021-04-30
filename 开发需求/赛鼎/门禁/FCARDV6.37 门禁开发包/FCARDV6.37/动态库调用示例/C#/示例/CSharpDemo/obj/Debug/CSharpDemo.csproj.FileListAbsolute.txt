@@ -1,0 +1,10 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.Form1.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\bin\Debug\CSharpDemo.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\bin\Debug\CSharpDemo.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\obj\Debug\CSharpDemo.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CSharpDemo\bin\Debug\DataTool.dll

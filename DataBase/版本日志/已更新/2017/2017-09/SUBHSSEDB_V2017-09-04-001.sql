@@ -1,0 +1,3 @@
+UPDATE Sys_MenuProjectA SET MenuName='Òþ»¼·ÖÎö(ÊÖ»ú¶Ë)' 
+WHERE MenuId='C763FEE5-B703-481A-BBDB-C85CE9B7846A'
+GO

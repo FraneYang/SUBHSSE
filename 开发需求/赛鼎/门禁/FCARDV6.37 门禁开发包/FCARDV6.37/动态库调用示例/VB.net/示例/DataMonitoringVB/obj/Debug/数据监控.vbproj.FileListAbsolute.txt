@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\DataMonitoringVB.exe.config
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\DataMonitoringVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\DataMonitoringVB.pdb
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\DataMonitoringVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\数据监控.vbprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\DataMonitoringVB.数据监控.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\DataMonitoringVB.Resources.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\数据监控.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\DataMonitoringVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\DataMonitoringVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\DataMonitoringVB\obj\Debug\DataMonitoringVB.pdb

@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\VbDemo.exe.config
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\VbDemo.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\VbDemo.pdb
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\VbDemo.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\DataTool.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\Vb总示例.vbprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\VbDemo.Form1.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\VbDemo.Resources.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\Vb总示例.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\VbDemo.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\VbDemo.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\VbDemo\obj\Debug\VbDemo.pdb

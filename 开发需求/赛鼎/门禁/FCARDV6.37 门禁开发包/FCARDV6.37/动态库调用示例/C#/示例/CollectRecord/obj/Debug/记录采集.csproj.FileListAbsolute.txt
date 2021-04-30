@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\bin\Debug\CollectRecord.exe.config
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\obj\Debug\CollectRecord.exe
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\obj\Debug\CollectRecord.pdb
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\bin\Debug\CollectRecord.exe.config
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\bin\Debug\CollectRecord.exe
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\bin\Debug\CollectRecord.pdb
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\bin\Debug\FCardCDrive.dll
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\记录采集.csprojAssemblyReference.cache
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\CollectRecord.记录采集.resources
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\CollectRecord.Properties.Resources.resources
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\记录采集.csproj.GenerateResource.cache
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\记录采集.csproj.CoreCompileInputs.cache
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\记录采集.csproj.CopyComplete
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\CollectRecord.exe
+D:\DepCode\CNCEC\SUBHSSE\开发需求\赛鼎\FCARDV6.37 门禁开发包\FCARDV6.37\动态库调用示例\C#\示例\CollectRecord\obj\Debug\CollectRecord.pdb

@@ -1,0 +1,2 @@
+ALTER TABLE Manager_HSSELog DROP COLUMN Contents11
+GO

@@ -1,0 +1,26 @@
+--ADD BY YangHongwei 2018-05-22
+1、增加安全文件上报主表及明细表。（十四）
+2、单据编号生成规则方法中按单位编号逻辑bug修改。
+--END
+
+--ADD BY YangHongwei 2018-05-21
+1、本设置培训类型可多次标识。(天辰)
+2、在教育培训中，对设置可多次培训的类型下可以查找所有人，不可多次培训的类型查找此类型未培训过的人。(天辰)
+--END
+
+--ADD BY YangHongwei 2018-05-18
+1、本部管理安全工作报告,增加项目安全文件上报。（十四）
+--END
+
+--ADD BY YangHongwei 2018-05-16
+1、本部管理安全事故模块：事故快报、事故处理页面增加流程审核功能。（十四）
+--END
+
+--ADD BY YangHongwei 2018-05-15
+1、流程审核，设置系统环境变量，根据变量可以按照自定义流程固定下一步审核，也可以随时下一步流程。（十四）
+2、安全相关软件链接到安全系统
+http://www.njajzelaq.com/2015/application/ui/EnterpriseLogin.html
+http://221.226.86.91:8000/zhaj/login_ent.jsp
+http://218.94.101.3:8089/hbpj/toLogin.do
+http://www.aqt365.com/jssajxt/application/ui/login.htm
+--END

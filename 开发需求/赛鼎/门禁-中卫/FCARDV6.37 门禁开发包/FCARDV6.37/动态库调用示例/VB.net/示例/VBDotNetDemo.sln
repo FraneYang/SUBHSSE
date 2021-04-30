@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "数据采集", "CollectRecordVB\数据采集.vbproj", "{3FFE573C-963C-40AF-A5A0-CE6776821B43}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "数据监控", "DataMonitoringVB\数据监控.vbproj", "{82AFC135-3AF1-47F2-9755-884CF346A4B0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "开门", "OpenDoorVB\开门.vbproj", "{69752BE9-8713-4D85-81B4-C5FE2CF9FD63}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "读取卡片", "ReadRecordVB\读取卡片.vbproj", "{97871F6D-C596-4F4B-B7B7-72C29688B58D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "上传卡片", "UploadCardVB\上传卡片.vbproj", "{5061C321-CBBC-4421-B9B8-C105B2C91818}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Vb总示例", "VbDemo\Vb总示例.vbproj", "{839EAE80-B69D-4FFA-9DB7-9A1D60BCC21F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FFE573C-963C-40AF-A5A0-CE6776821B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFE573C-963C-40AF-A5A0-CE6776821B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFE573C-963C-40AF-A5A0-CE6776821B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFE573C-963C-40AF-A5A0-CE6776821B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AFC135-3AF1-47F2-9755-884CF346A4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AFC135-3AF1-47F2-9755-884CF346A4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AFC135-3AF1-47F2-9755-884CF346A4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AFC135-3AF1-47F2-9755-884CF346A4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69752BE9-8713-4D85-81B4-C5FE2CF9FD63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69752BE9-8713-4D85-81B4-C5FE2CF9FD63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69752BE9-8713-4D85-81B4-C5FE2CF9FD63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69752BE9-8713-4D85-81B4-C5FE2CF9FD63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97871F6D-C596-4F4B-B7B7-72C29688B58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97871F6D-C596-4F4B-B7B7-72C29688B58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97871F6D-C596-4F4B-B7B7-72C29688B58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97871F6D-C596-4F4B-B7B7-72C29688B58D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5061C321-CBBC-4421-B9B8-C105B2C91818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5061C321-CBBC-4421-B9B8-C105B2C91818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5061C321-CBBC-4421-B9B8-C105B2C91818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5061C321-CBBC-4421-B9B8-C105B2C91818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839EAE80-B69D-4FFA-9DB7-9A1D60BCC21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839EAE80-B69D-4FFA-9DB7-9A1D60BCC21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839EAE80-B69D-4FFA-9DB7-9A1D60BCC21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839EAE80-B69D-4FFA-9DB7-9A1D60BCC21F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

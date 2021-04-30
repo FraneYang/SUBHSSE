@@ -1,0 +1,7 @@
+LawRegulationId, 主键
+LawRegulationCode, 编号
+LawRegulationName, 名称
+ApprovalDate , 批准日
+EffectiveDate , 生效日
+Description,简介及重点关注条款
+AttachUrl 原文附件

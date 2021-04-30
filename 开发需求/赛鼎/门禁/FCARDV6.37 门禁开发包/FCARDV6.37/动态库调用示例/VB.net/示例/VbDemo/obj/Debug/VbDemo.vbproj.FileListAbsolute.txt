@@ -1,0 +1,16 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\VbDemo.exe.config
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\VbDemo.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\VbDemo.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\VbDemo.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.vbprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.Form1.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\obj\Debug\VbDemo.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\DataTool.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\VbDemo\bin\Debug\zh-Hans\System.Net.Http.resources.dll

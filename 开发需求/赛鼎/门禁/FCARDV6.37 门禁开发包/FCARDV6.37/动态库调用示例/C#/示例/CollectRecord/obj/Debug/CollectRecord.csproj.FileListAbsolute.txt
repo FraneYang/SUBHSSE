@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\CollectRecord.exe.config
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\CollectRecord.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\CollectRecord.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\obj\Debug\CollectRecord.Collect.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\obj\Debug\CollectRecord.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\obj\Debug\CollectRecord.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\obj\Debug\CollectRecord.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\CollectRecord\obj\Debug\CollectRecord.pdb
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\bin\Debug\CollectRecord.exe.config
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\obj\Debug\CollectRecord.exe
+D:\fcard\二次开发文档\二次开发包\C#\示例\CollectRecord\obj\Debug\CollectRecord.pdb

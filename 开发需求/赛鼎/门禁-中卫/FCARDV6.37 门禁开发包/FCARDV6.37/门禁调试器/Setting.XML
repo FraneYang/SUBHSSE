@@ -1,0 +1,25 @@
+<根节点>
+  <通讯参数>
+    <目标SN>FC-8940A46060007</目标SN>
+    <通讯密码>FFFFFFFF</通讯密码>
+    <串口通讯>0</串口通讯>
+    <串口号>COM1</串口号>
+    <UDP通讯>0</UDP通讯>
+    <UDP_IP>192.168.1.169</UDP_IP>
+    <UDP_Port>8101</UDP_Port>
+    <Client通讯>0</Client通讯>
+    <Client_IP>192.168.1.169</Client_IP>
+    <Client_Port>8000</Client_Port>
+    <TCPServer通讯>1</TCPServer通讯>
+    <Serve_Port>9000</Serve_Port>
+    <gIOList_1>440</gIOList_1>
+    <gIOList_2>100</gIOList_2>
+    <gIOList_3>303</gIOList_3>
+    <gEvents_1>100</gEvents_1>
+    <gEvents_2>250</gEvents_2>
+    <gEvents_3>100</gEvents_3>
+    <gEvents_4>100</gEvents_4>
+    <gEvents_5>100</gEvents_5>
+    <gEvents_6>220</gEvents_6>
+  </通讯参数>
+</根节点>

@@ -1,0 +1,13 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\UploadCard.exe.config
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\UploadCard.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\UploadCard.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.upload.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\UploadCard\obj\Debug\UploadCard.pdb

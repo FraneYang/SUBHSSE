@@ -1,0 +1,10 @@
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\bin\Debug\UploadCardVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\bin\Debug\UploadCardVB.pdb
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\bin\Debug\UploadCardVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\UploadCardVB.Resources.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\UploadCardVB.上传卡片.resources
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\上传卡片.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\UploadCardVB.exe
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\UploadCardVB.xml
+D:\fcard\二次开发文档\二次开发包\VB.net\示例\UploadCardVB\obj\Debug\UploadCardVB.pdb

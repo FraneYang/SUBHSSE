@@ -1,0 +1,1 @@
+CAST([Datatime]-2 as datetime) as dRecordTime

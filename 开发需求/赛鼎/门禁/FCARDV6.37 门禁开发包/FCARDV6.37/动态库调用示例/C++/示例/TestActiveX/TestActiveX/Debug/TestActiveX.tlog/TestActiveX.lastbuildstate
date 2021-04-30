@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug|Win32|D:\fcard\二次开发文档\一卡通开发包_2017年11月20日\动态库调用示例\C++\调用FCDrive8800.Dll\TestActiveX\|

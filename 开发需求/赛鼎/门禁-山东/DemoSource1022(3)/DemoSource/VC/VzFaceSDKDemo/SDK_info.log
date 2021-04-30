@@ -1,0 +1,7 @@
+[net::fetchGroupIPAddress] <41> -find 192.168.205.1
+[net::fetchGroupIPAddress] <41> -find 192.168.186.1
+[net::fetchGroupIPAddress] <41> -find 192.168.1.195
+[net::MakeGroupSocket] <112> -set_option 192.168.205.1
+[net::MakeGroupSocket] <112> -set_option 192.168.186.1
+[net::MakeGroupSocket] <112> -set_option 192.168.1.195
+[Session::SendCmd] <2497> -SendCmd  = ERR_UNCONNECTED

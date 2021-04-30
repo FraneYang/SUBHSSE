@@ -1,0 +1,15 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\OpenDoorVB.exe.config
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\OpenDoorVB.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\OpenDoorVB.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\OpenDoorVB.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\System.Net.Http.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\System.Net.Http.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.OpenDoor.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.vbproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.xml
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\OpenDoorVB\obj\Debug\OpenDoorVB.vbprojResolveAssemblyReference.cache

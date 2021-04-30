@@ -1,0 +1,35 @@
+mysql> describe tconsumer;
++---------------------+------------+------+-----+---------+----------------+
+| Field               | Type       | Null | Key | Default | Extra          |
++---------------------+------------+------+-----+---------+----------------+
+| iConsumerID         | int(11)    | NO   | PRI | NULL    | auto_increment |
+| cConsumerNO         | longtext   | YES  |     | NULL    |                |
+| cConsumerName       | longtext   | YES  |     | NULL    |                |
+| cLoginName          | longtext   | YES  |     | NULL    |                |
+| cCardNO             | longtext   | YES  |     | NULL    |                |
+| iGroupID            | int(11)    | YES  |     | NULL    |                |
+| iGroupsupID         | int(11)    | YES  |     | NULL    |                |
+| cGroupSupName       | longtext   | YES  |     | NULL    |                |
+| bAttendEnabled      | tinyint(1) | YES  |     | NULL    |                |
+| bShiftEnabled       | tinyint(1) | YES  |     | NULL    |                |
+| bDoorEnabled        | tinyint(1) | YES  |     | NULL    |                |
+| bNecEnabled         | tinyint(1) | YES  |     | NULL    |                |
+| dBeginYMD           | datetime   | YES  |     | NULL    |                |
+| dEndYMD             | datetime   | YES  |     | NULL    |                |
+| iConsumerState      | int(11)    | YES  |     | NULL    |                |
+| cPassword           | longtext   | YES  |     | NULL    |                |
+| iConsumerTypeID     | int(11)    | YES  |     | NULL    |                |
+| iRoleID             | int(11)    | YES  |     | NULL    |                |
+| dCreateDatetime     | datetime   | YES  |     | NULL    |                |
+| cUps                | longtext   | YES  |     | NULL    |                |
+| cMems               | longtext   | YES  |     | NULL    |                |
+| dBalance            | double     | YES  |     | NULL    |                |
+| iFgprintAddress     | int(11)    | YES  |     | NULL    |                |
+| iFgprint1           | int(11)    | YES  |     | NULL    |                |
+| iFgprint2           | int(11)    | YES  |     | NULL    |                |
+| iFgprint3           | int(11)    | YES  |     | NULL    |                |
+| iFgprint4           | int(11)    | YES  |     | NULL    |                |
+| iFgprint5           | int(11)    | YES  |     | NULL    |                |
+| iFgprint6           | int(11)    | YES  |     | NULL    |                |
+| iConsumerIdentityID | int(11)    | YES  |     | NULL    |                |
++---------------------+------------+------+-----+---------+----------------+

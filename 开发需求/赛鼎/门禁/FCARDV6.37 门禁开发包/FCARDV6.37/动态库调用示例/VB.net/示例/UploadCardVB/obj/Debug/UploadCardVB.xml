@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UploadCardVB
+</name>
+</assembly>
+<members>
+<member name="T:UploadCardVB.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:UploadCardVB.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:UploadCardVB.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:UploadCardVB.上传卡片._CommandAchieve(FCardCDrive.Connect.ConnectInfo,System.Int32,System.Object)">
+ <summary>
+ 命令成功事件
+ </summary>
+ <param name="oInfo">原封不动返回执行命令时候的连接参数对象</param>
+ <param name="iCommandCode">命令代码，与枚举对象一一对应</param>
+ <param name="oValue">命令返回值</param>
+</member>
+<member name="M:UploadCardVB.上传卡片._ConnectError(FCardCDrive.Connect.ConnectInfo,System.Int32,System.Object)">
+ <summary>
+ 连接错误
+ </summary>
+ <param name="oInfo">原封不动返回执行命令时候的连接参数对象</param>
+ <param name="iCommandCode">命令代码，与枚举对象一一对应</param>
+ <param name="oValue">命令返回值</param>
+</member>
+<member name="M:UploadCardVB.上传卡片._PasswordError(FCardCDrive.Connect.ConnectInfo,System.Int32,System.Object)">
+ <summary>
+ 密码错误
+ </summary>
+ <param name="oInfo">原封不动返回执行命令时候的连接参数对象</param>
+ <param name="iCommandCode">命令代码，与枚举对象一一对应</param>
+ <param name="oValue">命令返回值</param>
+</member>
+</members>
+</doc>

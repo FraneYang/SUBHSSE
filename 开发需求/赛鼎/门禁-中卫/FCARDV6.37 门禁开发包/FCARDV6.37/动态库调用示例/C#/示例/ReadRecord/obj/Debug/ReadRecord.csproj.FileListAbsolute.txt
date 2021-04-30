@@ -1,0 +1,9 @@
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\bin\Debug\ReadRecord.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\bin\Debug\ReadRecord.pdb
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\bin\Debug\FCardCDrive.dll
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.csprojResolveAssemblyReference.cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.Form1.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.Properties.Resources.resources
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.csproj.GenerateResource.Cache
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.exe
+D:\fcard\二次开发文档\示例代码\UsingFCardCDrive\ReadRecord\obj\Debug\ReadRecord.pdb
