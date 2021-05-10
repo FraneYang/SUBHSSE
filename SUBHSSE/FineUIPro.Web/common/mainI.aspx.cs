@@ -23,7 +23,7 @@ namespace FineUIPro.Web.common
             }
         }
 
-        public string swiperHtml;
+
         #region 加载页面
         /// <summary>
         /// 加载页面
@@ -625,17 +625,19 @@ namespace FineUIPro.Web.common
             this.BindGridNewDynamic("close");
         }
         #endregion
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public string swiperHtml;
 
         #region 项目图片
-        public string pics, links, texts;
-
         /// <summary>
         /// 项目图片显示
         /// </summary>
         public void ProjectPic()
         {
             swiperHtml = " ";
-
             var getP = from x in Funs.DB.InformationProject_Picture
                        join y in Funs.DB.AttachFile on x.PictureId equals y.ToKeyId
                        where y.AttachFileId != null && y.AttachUrl != null
@@ -652,10 +654,13 @@ namespace FineUIPro.Web.common
                     var geturl = Funs.GetStrListByStr(item.AttachUrl, ',');
                     foreach (var itemurl in geturl)
                     {
-                        swiperHtml += @"<div class='swiper-slide'>                                                                  
+                        if (!string.IsNullOrEmpty(itemurl))
+                        {
+                            swiperHtml += @"<div class='swiper-slide'>                                                                  
                             <img data-src='../" + itemurl + @"' class='swiper-lazy'>
                             <div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>
                             </div>";
+                        }
                     }
                 }
             }

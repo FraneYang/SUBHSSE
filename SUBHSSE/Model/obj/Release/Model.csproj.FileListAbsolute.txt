@@ -131,3 +131,4 @@ D:\CNCEC\SUBHSSE\SUBHSSE\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
 D:\CNCEC\SUBHSSE\SUBHSSE\Model\obj\Release\Model.csproj.CopyComplete
 D:\CNCEC\SUBHSSE\SUBHSSE\Model\obj\Release\Model.dll
 D:\CNCEC\SUBHSSE\SUBHSSE\Model\obj\Release\Model.pdb
+D:\CNCEC\SUBHSSE\SUBHSSE\Model\obj\Release\Model.csprojAssemblyReference.cache

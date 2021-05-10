@@ -20,12 +20,28 @@ namespace BLL
                 var getUser = from x in db.SitePerson_Person
                               where (x.Telephone == userInfo.Account || x.PersonName == userInfo.Account)
                                 && (x.Password == Funs.EncryptionPassword(userInfo.Password) || (x.IdentityCard != null && x.IdentityCard.Substring(x.IdentityCard.Length - 4) == userInfo.Password))
-                                && x.InTime <= DateTime.Now && (!x.OutTime.HasValue || x.OutTime >= DateTime.Now) && x.IsUsed == true
+                                && x.InTime <= DateTime.Now && (!x.OutTime.HasValue || x.OutTime >= DateTime.Now) && x.IsUsed == true                                
                               select x;
                 if (!string.IsNullOrEmpty(userInfo.LoginProjectId))
                 {
                     getUser = getUser.Where(x => x.ProjectId == userInfo.LoginProjectId);
                 }
+
+                var getProject = db.Base_Project.Where(x => x.ProjectState == "3" || x.ProjectState == "2");
+                List<string> pIds = new List<string>();
+                foreach (var item in getUser)
+                {
+                    var getN = getProject.FirstOrDefault(x => x.ProjectId == item.ProjectId);
+                    if (getN != null)
+                    {
+                        pIds.Add(item.PersonId);
+                    }
+                }
+                if (pIds.Count() > 0)
+                {
+                    getUser = getUser.Where(x => !pIds.Contains(x.PersonId));
+                }
+                
                 if (getUser.Count() > 0)
                 {
                     return (from x in getUser
@@ -40,7 +56,7 @@ namespace BLL
                                 IdentityCard = x.IdentityCard,
                                 Account = x.Telephone,
                                 UnitName = db.Base_Unit.First(u => u.UnitId == x.UnitId).UnitName,
-                                LoginProjectName = db.Base_Project.First(u => u.ProjectId == x.ProjectId).ProjectName,
+                                LoginProjectName =db.Base_Project.First(y=>y.ProjectId==x.ProjectId).ProjectName,
                                 Telephone = x.Telephone,
                                 WorkPostId = x.WorkPostId,
                                 WorkPostName = db.Base_WorkPost.First(w => w.WorkPostId == x.WorkPostId).WorkPostName,

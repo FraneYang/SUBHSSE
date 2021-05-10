@@ -23,9 +23,7 @@
 <TreeNode id="C91CD0C5-6609-40BD-B5E6-C2DF148B198B" Text="考试系统" NavigateUrl="OnlineCheck/TestSystem.aspx" Icon="Page"></TreeNode>
 </TreeNode>
 <TreeNode id="F3B157B7-9BEE-4150-80CB-087828F1C51D" Text="安全技术" NavigateUrl="" Icon="PagePaste"><TreeNode id="66A76F90-96A7-4C1F-B8D9-125DDEACEF52" Text="危险源清单" NavigateUrl="Technique/HazardList.aspx" Icon="Page"></TreeNode>
-<TreeNode id="C0018E8C-C88B-4E25-BCFC-F0BF3CACC63A" Text="公司危险源清单" NavigateUrl="Technique/CompanyHazardList.aspx" Icon="Page"></TreeNode>
 <TreeNode id="773B59F9-61F9-4F5E-9D68-A1BF9322AFFA" Text="环境因素危险源" NavigateUrl="Technique/Environmental.aspx" Icon="Page"></TreeNode>
-<TreeNode id="DC2AA8C2-82A8-4F7A-832D-9889C65AA228" Text="公司环境因素危险源" NavigateUrl="Technique/CompanyEnvironmental.aspx" Icon="Page"></TreeNode>
 <TreeNode id="88CDDC68-54DE-4E24-9524-A33B80EC0E12" Text="安全隐患" NavigateUrl="Technique/Rectify.aspx" Icon="Page"></TreeNode>
 <TreeNode id="4D92095C-8222-49D2-AF96-CD1972D4F4F8" Text="项目安全检查项" NavigateUrl="Technique/CheckItemSet.aspx" Icon="Page"></TreeNode>
 <TreeNode id="41C22E63-36B7-4C44-89EC-F765BFBB7C55" Text="HAZOP管理" NavigateUrl="Technique/HAZOP.aspx" Icon="Page"></TreeNode>

@@ -128,16 +128,27 @@ namespace BLL
                     }
                     catch
                     {
-                        var db = new Model.SUBHSSEDB(connString);
+                        //var db = new Model.SUBHSSEDB(connString);
+                        //if (DBList.ContainsKey(System.Threading.Thread.CurrentThread.ManagedThreadId))
+                        //{
+                        //    DBList[System.Threading.Thread.CurrentThread.ManagedThreadId] = db;
+                        //}
+                        //else
+                        //{
+                        //    DBList.Add(System.Threading.Thread.CurrentThread.ManagedThreadId, db);
+                        //}
+                        //return db;
+
                         if (DBList.ContainsKey(System.Threading.Thread.CurrentThread.ManagedThreadId))
                         {
-                            DBList[System.Threading.Thread.CurrentThread.ManagedThreadId] = db;
+                            return DBList[System.Threading.Thread.CurrentThread.ManagedThreadId];
                         }
                         else
                         {
+                            var db = new Model.SUBHSSEDB(connString);
                             DBList.Add(System.Threading.Thread.CurrentThread.ManagedThreadId, db);
+                            return db;
                         }
-                        return db;
                     }
                 }
             }

@@ -27,29 +27,24 @@
         .swiper-container {
             width: 100%;
             height: 290px;
-        }
-
-
-
-
+        }                     
         .swiper-slide {
             text-align: center;
             font-size: 18px;
         }
-
-            .swiper-slide img {
-                width: auto;
-                height: auto;
-                max-width: 100%;
-                max-height: 100%;
-                -ms-transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                position: absolute;
-                left: 50%;
-                top: 50%;
-            }
+        .swiper-slide img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
     </style>
 </head>
 <body>

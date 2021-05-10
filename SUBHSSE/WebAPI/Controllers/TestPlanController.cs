@@ -253,28 +253,30 @@ namespace WebAPI.Controllers
                                         int sumTestType2Count = testPlanTrainings.Sum(x => x.TestType2Count) ?? 0;
                                         int sumTestType3Count = testPlanTrainings.Sum(x => x.TestType3Count) ?? 0;
 
+                                        IQueryable<Model.Training_TestTrainingItem> getTestTrainingItemALLs = null;  
                                         ////获取类型下适合岗位试题集合
-                                        List<Model.Training_TestTrainingItem> getTestTrainingItemALLs = new List<Model.Training_TestTrainingItem>();
+                                       // List<Model.Training_TestTrainingItem> getTestTrainingItemALLs = new List<Model.Training_TestTrainingItem>();
                                         if (!string.IsNullOrEmpty(getTestPlan.ProjectId))
                                         {
-                                            getTestTrainingItemALLs = (from x in db.Training_TestTrainingItem
+                                            getTestTrainingItemALLs = from x in db.Training_TestTrainingItem
                                                                        join y in db.Training_TestTraining on x.TrainingId equals y.TrainingId
                                                                        where y.ProjectId.Contains(getTestRecord.ProjectId) && x.TrainingId != null
                                                                        && (x.WorkPostIds == null || (x.WorkPostIds.Contains(person.WorkPostId) && person.WorkPostId != null))
-                                                                       select x).ToList();
+                                                                       select x;
                                         }
                                         else
                                         {
-                                            getTestTrainingItemALLs = (from x in db.Training_TestTrainingItem
+                                            getTestTrainingItemALLs = from x in db.Training_TestTrainingItem
                                                                        join y in db.Training_TestTraining on x.TrainingId equals y.TrainingId
                                                                        where y.ProjectId == null && x.TrainingId != null
                                                                        && (x.WorkPostIds == null || (x.WorkPostIds.Contains(person.WorkPostId) && person.WorkPostId != null))
-                                                                       select x).ToList();
+                                                                       select x;
                                         }
+
                                         foreach (var itemT in testPlanTrainings)
                                         {
                                             //// 获取类型下的题目
-                                            var getTestTrainingItems = getTestTrainingItemALLs.Where(x => x.TrainingId == itemT.TrainingId).ToList();
+                                            var getTestTrainingItems = getTestTrainingItemALLs.Where(x => x.TrainingId == itemT.TrainingId);
                                             if (getTestTrainingItems.Count() > 0)
                                             {
                                                 ////单选题
@@ -303,11 +305,11 @@ namespace WebAPI.Controllers
                                         int getDiffTestType3Count = sumTestType3Count - getTestTrainingItemList.Where(x => x.TestType == "3").Count();
                                         if (getDiffTestType1Count > 0 || getDiffTestType2Count > 0 || getDiffTestType3Count > 0)
                                         {
-                                            var getTestTrainingItemNulls = getTestTrainingItemALLs.Where(x => x.WorkPostIds == null).ToList();
+                                            var getTestTrainingItemNulls = getTestTrainingItemALLs.Where(x => x.WorkPostIds == null);
                                             if (getTestTrainingItemNulls.Count() > 0)
                                             {
                                                 ////  通用且未选择的题目
-                                                var getTestTrainingItemDiffs = getTestTrainingItemNulls.Except(getTestTrainingItemList).ToList();
+                                                var getTestTrainingItemDiffs = getTestTrainingItemNulls.Except(getTestTrainingItemList);
                                                 //// 单选题
                                                 if (getDiffTestType1Count > 0)
                                                 {

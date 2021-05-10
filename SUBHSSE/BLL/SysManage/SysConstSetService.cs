@@ -44,13 +44,16 @@
         /// <returns></returns>
         public static int getPassScore()
         {
-            int passScore = 80;
-            var testRule = Funs.DB.Sys_TestRule.FirstOrDefault();
-            if (testRule != null)
+            using (Model.SUBHSSEDB db1 = new Model.SUBHSSEDB(Funs.ConnString))
             {
-                passScore = testRule.PassingScore;
+                int passScore = 80;
+                var testRule = db1.Sys_TestRule.FirstOrDefault();
+                if (testRule != null)
+                {
+                    passScore = testRule.PassingScore;
+                }
+                return passScore;
             }
-            return passScore;
         }
 
         #region 菜单编码模板

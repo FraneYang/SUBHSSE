@@ -18,40 +18,44 @@ namespace WebAPI.Filter
         /// </summary>
         /// <param name="actionContext"></param>
         public override void OnActionExecuting(HttpActionContext actionContext)
-        {
-            bool isOk = false;
-            actionContext.Request.Headers.TryGetValues("token", out IEnumerable<string> token);
-            string strValues = actionContext.ActionDescriptor.ControllerDescriptor.ControllerName + "*" + ((ReflectedHttpActionDescriptor)actionContext.ActionDescriptor).ActionName;
-            if (lists.FirstOrDefault(x => x == strValues) != null)
+        {       
+            using (Model.SUBHSSEDB db = new Model.SUBHSSEDB(BLL.Funs.ConnString))
             {
-                isOk = true;
-            }
-
-            if (!isOk && token != null)
-            {
-                var getUser = BLL.UserService.GetUserByUserId(token.FirstOrDefault());
-                if (getUser != null)
+                bool isOk = false;
+                actionContext.Request.Headers.TryGetValues("token", out IEnumerable<string> token);
+                string strValues = actionContext.ActionDescriptor.ControllerDescriptor.ControllerName + "*" + ((ReflectedHttpActionDescriptor)actionContext.ActionDescriptor).ActionName;
+                if (lists.FirstOrDefault(x => x == strValues) != null)
                 {
                     isOk = true;
                 }
-                else
+
+                if (!isOk && token != null)
                 {
-                    var getPerson = BLL.PersonService.GetPersonById(token.FirstOrDefault());
-                    if (getPerson != null)
+                    string idvalue = token.FirstOrDefault();
+                    var getUser = db.Sys_User.FirstOrDefault(e => e.UserId == idvalue); 
+                    if (getUser != null)
                     {
                         isOk = true;
                     }
+                    else
+                    {
+                        var getPerson = db.SitePerson_Person.FirstOrDefault(e => e.PersonId == idvalue); 
+                        if (getPerson != null)
+                        {
+                            isOk = true;
+                        }
+                    }
                 }
-            }
-            // base.OnActionExecuting(actionContext);
-            if (isOk)
-            {
-                base.OnActionExecuting(actionContext);
-            }
-            else
-            {
-                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.OK,
-                       new { code = "0", message = "您没有权限！" }, actionContext.ControllerContext.Configuration.Formatters.JsonFormatter);
+                // base.OnActionExecuting(actionContext);
+                if (isOk)
+                {
+                    base.OnActionExecuting(actionContext);
+                }
+                else
+                {
+                    actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.OK,
+                           new { code = "0", message = "您没有权限！" }, actionContext.ControllerContext.Configuration.Formatters.JsonFormatter);
+                }
             }
         }
 

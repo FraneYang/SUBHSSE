@@ -569,20 +569,20 @@ namespace BLL
         /// <param name="testPlanId"></param>
         public static void updateAll(string testPlanId)
         {
-            using (Model.SUBHSSEDB db = new Model.SUBHSSEDB(Funs.ConnString))
+            using (Model.SUBHSSEDB dbAll = new Model.SUBHSSEDB(Funs.ConnString))
             {
                 //// 获取考试计划
-                var getTestPlan = db.Training_TestPlan.FirstOrDefault(x => x.TestPlanId == testPlanId);
+                var getTestPlan = dbAll.Training_TestPlan.FirstOrDefault(x => x.TestPlanId == testPlanId);
                 if (getTestPlan != null)
                 {
                     //// 获取参加考试 记录
-                    var getAllTestRecords = db.Training_TestRecord.Where(x => x.TestPlanId == getTestPlan.TestPlanId);
+                    var getAllTestRecords = dbAll.Training_TestRecord.Where(x => x.TestPlanId == getTestPlan.TestPlanId);
                     if (getAllTestRecords.Count() > 0)
                     {
                         /// 参加考试人数
                         int testManCout = getAllTestRecords.Select(x => x.TestManId).Distinct().Count();
                         //// 获取培训计划人员
-                        var getAllTrainingTasks = db.Training_Task.Where(x => x.PlanId == getTestPlan.PlanId);
+                        var getAllTrainingTasks = dbAll.Training_Task.Where(x => x.PlanId == getTestPlan.PlanId);
                         //// 考试人数大于等于 培训人数
                         if (testManCout >= getAllTrainingTasks.Count())
                         {
@@ -594,10 +594,10 @@ namespace BLL
                                 foreach (var item in getTrainingTasks)
                                 {
                                     item.States = "2";
-                                    db.SubmitChanges();
+                                    dbAll.SubmitChanges();
                                 }
                                 getTestPlan.States = "3";
-                                db.SubmitChanges();
+                                dbAll.SubmitChanges();
                                 ////TODO 讲培训计划 考试记录 写入到培训记录
                                 APITrainRecordService.InsertTrainRecord(getTestPlan);
                             }
@@ -615,7 +615,7 @@ namespace BLL
         /// <param name="testRecord"></param>
         public static string getResitTestRecord(Model.Training_TestRecord getTestRecord)
         {
-            using (Model.SUBHSSEDB db = new Model.SUBHSSEDB(Funs.ConnString))
+            using (Model.SUBHSSEDB db1 = new Model.SUBHSSEDB(Funs.ConnString))
             {
                 Model.Training_TestRecord newTestRecord = new Model.Training_TestRecord
                 {
@@ -630,10 +630,10 @@ namespace BLL
                     // TestStartTime = DateTime.Now,
                 };
 
-                db.Training_TestRecord.InsertOnSubmit(newTestRecord);
-                db.SubmitChanges();
+                db1.Training_TestRecord.InsertOnSubmit(newTestRecord);
+                db1.SubmitChanges();
 
-                var getTestPlan = db.Training_TestPlan.FirstOrDefault(x => x.TestPlanId == newTestRecord.TestPlanId);
+                var getTestPlan = db1.Training_TestPlan.FirstOrDefault(x => x.TestPlanId == newTestRecord.TestPlanId);
                 var person = PersonService.GetPersonByUserId(newTestRecord.TestManId, getTestRecord.ProjectId);
                 if (getTestPlan != null && person != null)
                 {
