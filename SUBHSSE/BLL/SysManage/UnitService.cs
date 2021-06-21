@@ -354,6 +354,24 @@ namespace BLL
         }
 
         /// <summary>
+        ///  单位表下拉框
+        /// </summary>
+        /// <param name="dropName">下拉框名字</param>
+        /// <param name="isShowPlease">是否显示请选择</param>
+        public static void InitUnitUnitIdDropDownList(FineUIPro.DropDownList dropName, string unitId, bool isShowPlease)
+        {
+            dropName.DataValueField = "UnitId";
+            dropName.DataTextField = "UnitName";
+            dropName.DataSource = (from x in Funs.DB.Base_Unit
+                                   where x.UnitId == unitId
+                                   select x).ToList(); ;
+            dropName.DataBind();
+            if (isShowPlease)
+            {
+                Funs.FineUIPleaseSelect(dropName);
+            }
+        }
+        /// <summary>
         ///  根据单位类型获取单位表下拉框
         /// </summary>
         /// <param name="dropName">下拉框名字</param>
@@ -431,6 +449,33 @@ namespace BLL
                     if (q != null)
                     {
                         unitName += q.UnitName + ",";
+                    }
+                }
+                if (unitName != string.Empty)
+                {
+                    unitName = unitName.Substring(0, unitName.Length - 1); ;
+                }
+            }
+
+            return unitName;
+        }
+        /// <summary>
+        /// 根据多单位ID得到单位名称字符串 - 换行
+        /// </summary>
+        /// <param name="bigType"></param>
+        /// <returns></returns>
+        public static string getUnitNames2UnitIds(object unitIds)
+        {
+            string unitName = string.Empty;
+            if (unitIds != null)
+            {
+                string[] ids = unitIds.ToString().Split(',');
+                foreach (string id in ids)
+                {
+                    var q = GetUnitByUnitId(id);
+                    if (q != null)
+                    {
+                        unitName += q.UnitName + "</br>";
                     }
                 }
                 if (unitName != string.Empty)

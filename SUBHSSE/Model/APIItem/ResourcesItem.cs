@@ -18,6 +18,16 @@ namespace Model
             get;
             set;
         }
+        public string CompanyId
+        {
+            get;
+            set;
+        }
+        public string UnitId
+        {
+            get;
+            set;
+        }
         public string ProjectId
         {
             get;

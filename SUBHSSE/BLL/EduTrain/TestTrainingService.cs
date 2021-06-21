@@ -35,7 +35,9 @@ namespace BLL
                 SupTrainingId = TestTraining.SupTrainingId ?? "0",
                 IsEndLever = TestTraining.IsEndLever,
                 ProjectId = TestTraining.ProjectId,
-        };
+                CompanyId = TestTraining.CompanyId,
+                UnitIds = TestTraining.UnitIds,
+            };
             db.Training_TestTraining.InsertOnSubmit(newTestTraining);
             db.SubmitChanges();
         }
@@ -56,6 +58,8 @@ namespace BLL
                 newTestTraining.SupTrainingId = TestTraining.SupTrainingId;
                 newTestTraining.IsEndLever = TestTraining.IsEndLever;
                 newTestTraining.ProjectId = TestTraining.ProjectId;
+                newTestTraining.CompanyId = TestTraining.CompanyId;
+                newTestTraining.UnitIds = TestTraining.UnitIds;
                 db.SubmitChanges();
             }
         }
@@ -92,16 +96,49 @@ namespace BLL
                     orderby x.TrainingCode
                     select x).ToList();
         }
+
         /// <summary>
         /// 根据上级ID获取试题类型列表
         /// </summary>
         /// <returns></returns>
-        public static List<Model.Training_TestTraining> GetTestTrainingListBySupTrainingId(string supTrainingId, string projectId)
+        public static List<Model.Training_TestTraining> GetTestTrainingListBySupTrainingIdProjectId(string supTrainingId, string projectId)
         {
             return (from x in db.Training_TestTraining
-                    where x.SupTrainingId == supTrainingId && (x.ProjectId == projectId || x.ProjectId.Contains(projectId))
+                    where x.SupTrainingId == supTrainingId &&  x.ProjectId.Contains(projectId)
                     orderby x.TrainingCode
                     select x).ToList();
+        }
+
+        /// <summary>
+        /// 根据上级ID获取试题类型列表
+        /// </summary>
+        /// <returns></returns>
+        public static List<Model.Training_TestTraining> GetTestTrainingListBySupTrainingIdUnitId(string supTrainingId, string unitId)
+        {
+            List<Model.Training_TestTraining> testTrainingLists = new List<Model.Training_TestTraining>();
+            var getTestTrainings = from x in db.Training_TestTraining
+                                where x.SupTrainingId == supTrainingId
+                                select x;
+            testTrainingLists = (from x in getTestTrainings
+                                 where  x.UnitIds.Contains(unitId)
+                                 orderby x.TrainingCode
+                                 select x).ToList();
+            var getProjects = ProjectService.GetProjectWorkByUnitIdList(unitId);
+            if (getProjects.Count() > 0)
+            {
+                foreach (var item in getProjects)
+                {
+                    var getPTest = (from x in getTestTrainings
+                                    where x.ProjectId.Contains(item.ProjectId)
+                                    orderby x.TrainingCode
+                                    select x).ToList();
+                    if (getPTest.Count() > 0)
+                    {
+                        testTrainingLists.AddRange(getPTest);
+                    }
+                }
+            }
+            return testTrainingLists.Distinct().OrderBy(x=>x.TrainingCode).ToList();
         }
     }
 }

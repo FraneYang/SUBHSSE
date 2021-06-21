@@ -677,7 +677,7 @@ namespace FineUIPro.Web.HiddenInspection
             {
                 hazardRegisterIds = hazardRegisterIds.Substring(0, hazardRegisterIds.LastIndexOf(","));
             }
-            PageContext.RegisterStartupScript(Window4.GetShowReference(String.Format("HiddenRectificationPrint.aspx?HazardRegisterIds={0}&CheckType={1}", hazardRegisterIds, this.ckType.SelectedValue, "查看 - ")));
+            PageContext.RegisterStartupScript(Window5.GetShowReference(String.Format("HiddenRectificationPrint.aspx?HazardRegisterIds={0}&CheckType={1}", hazardRegisterIds, this.ckType.SelectedValue, "查看 - ")));
             PageContext.RegisterStartupScript(Window5.GetShowReference(String.Format("HiddenRectificationRecordPrint.aspx?HazardRegisterIds={0}&Remark={1}&CheckType={2}", hazardRegisterIds, this.hdRemark.Text, this.ckType.SelectedValue, "查看 - ")));
             this.hdRemark.Text = string.Empty;
             //}

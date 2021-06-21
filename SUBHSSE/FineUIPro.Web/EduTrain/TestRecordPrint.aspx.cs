@@ -123,7 +123,7 @@ namespace FineUIPro.Web.EduTrain
         /// </summary>
         private void BindGrid(string sql)
         {
-            gvTest.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '1' ORDER BY TrainingItemCode", null);
+            gvTest.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '1' ORDER BY TestRecordItemId", null);
             gvTest.DataBind();           
         }
         /// <summary>
@@ -131,7 +131,7 @@ namespace FineUIPro.Web.EduTrain
         /// </summary>
         private void BindGrid2(string sql)
         {
-            gvTest2.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '2' ORDER BY TrainingItemCode", null); ;
+            gvTest2.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '2' ORDER BY TestRecordItemId", null); ;
             gvTest2.DataBind();
         }
 
@@ -140,7 +140,7 @@ namespace FineUIPro.Web.EduTrain
         /// </summary>
         private void BindGrid3(string sql)
         {
-            gvTest3.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '3' ORDER BY TrainingItemCode", null); ; ;
+            gvTest3.DataSource = SQLHelper.GetDataTableRunText(sql + " AND TestType= '3' ORDER BY TestRecordItemId", null); ; ;
             gvTest3.DataBind();
         }
         /// <summary>

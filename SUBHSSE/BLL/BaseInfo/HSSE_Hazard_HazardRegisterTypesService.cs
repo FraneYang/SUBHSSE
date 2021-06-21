@@ -85,5 +85,23 @@ namespace BLL
         {
             return (from x in Funs.DB.HSSE_Hazard_HazardRegisterTypes where x.HazardRegisterType == hazardRegisterType orderby x.TypeCode select x).ToList();
         }
+
+        /// <summary>
+        /// 巡检类型下拉框
+        /// </summary>
+        /// <param name="dropName"></param>
+        /// <param name="hazardRegisterType"></param>
+        /// <param name="isShowPlease"></param>
+        public static void InitHazardRegisterTypesDropDownList(FineUIPro.DropDownList dropName, string hazardRegisterType, bool isShowPlease)
+        {
+            dropName.DataValueField = "RegisterTypesId";
+            dropName.DataTextField = "RegisterTypesName";
+            dropName.DataSource = GetHazardRegisterTypesList(hazardRegisterType);
+            dropName.DataBind();
+            if (isShowPlease)
+            {
+                Funs.FineUIPleaseSelect(dropName);
+            }
+        }
     }
 }

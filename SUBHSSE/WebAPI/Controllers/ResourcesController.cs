@@ -273,7 +273,7 @@ namespace WebAPI.Controllers
             var responeData = new Model.ResponeData();
             try
             {
-                var getDataList = APIResourcesService.getTestTrainingListBySupTrainingId(supTypeId, null, pageIndex);
+                var getDataList = APIResourcesService.getTestTrainingListBySupTrainingId(supTypeId, null, null, pageIndex);
                 int pageCount = APIResourcesService.getTestTrainingListCount;             
                 responeData.data = new { pageCount, getDataList };
             }
@@ -298,7 +298,33 @@ namespace WebAPI.Controllers
             var responeData = new Model.ResponeData();
             try
             {
-                var getDataList = APIResourcesService.getTestTrainingListBySupTrainingId(supTypeId, projectId, pageIndex);
+                var getDataList = APIResourcesService.getTestTrainingListBySupTrainingId(supTypeId, null, projectId, pageIndex);
+                int pageCount = APIResourcesService.getTestTrainingListCount;
+                responeData.data = new { pageCount, getDataList };
+            }
+            catch (Exception ex)
+            {
+                responeData.code = 0;
+                responeData.message = ex.Message;
+                ErrLogInfo.WriteLog(ex, "WX接口-获取考试试题类型", "ResourcesController.getTestTrainingListBySupTrainingId");
+            }
+            return responeData;
+        }
+
+        /// <summary>
+        /// 根据父级类型ID获取考试试题类型
+        /// </summary>
+        /// <param name="supTypeId"></param>
+        ///  <param name="unitId"></param>
+        ///  <param name="projectId"></param>
+        /// <param name="pageIndex">分页</param>
+        /// <returns></returns>
+        public Model.ResponeData getTestTrainingListBySupTrainingId(string supTypeId, string unitId, string projectId, int pageIndex)
+        {
+            var responeData = new Model.ResponeData();
+            try
+            {
+                var getDataList = APIResourcesService.getTestTrainingListBySupTrainingId(supTypeId, unitId, projectId, pageIndex);
                 int pageCount = APIResourcesService.getTestTrainingListCount;
                 responeData.data = new { pageCount, getDataList };
             }
@@ -333,7 +359,7 @@ namespace WebAPI.Controllers
         }
         #endregion
 
-        #region 根据培训教材类型id获取考试试题列表
+        #region 根据类型id获取考试试题列表
         /// <summary>
         /// 根据培训教材类型id获取考试试题列表
         /// </summary>

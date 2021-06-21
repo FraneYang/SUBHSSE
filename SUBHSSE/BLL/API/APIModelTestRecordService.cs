@@ -123,7 +123,7 @@ namespace BLL
             {
                 var getDataLists = from x in db.Training_ModelTestRecordItem
                                    where x.ModelTestRecordId == modelTestRecordId
-                                   orderby x.TestType, x.TrainingItemCode
+                                   orderby x.TestType, x.ModelTestRecordItemId
                                    select new Model.TestRecordItemItem
                                    {
                                        TestRecordItemId = x.ModelTestRecordItemId,

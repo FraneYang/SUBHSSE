@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>培训试题</title>
+    <title>试题</title>
     <link href="../res/css/common.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .f-grid-row .f-grid-cell-inner

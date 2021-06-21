@@ -17,7 +17,7 @@
             <f:FormRow>
                 <Items>
                     <f:TextBox ID="txtTrainingItemCode" runat="server" Label="编号/Code" Required="true" ShowRedStar="true"
-                        FocusOnPageLoad="true" MaxLength="50">
+                        FocusOnPageLoad="true" MaxLength="50" LabelWidth="110px">
                     </f:TextBox>
                     <f:RadioButtonList runat="server" ID="rblTestType" Label="题型/Type" 
                         AutoPostBack="true" OnSelectedIndexChanged="rblTestType_SelectedIndexChanged">
@@ -29,7 +29,7 @@
             </f:FormRow>
             <f:FormRow>
                  <Items>
-                  <f:DropDownBox runat="server" Label="岗位/Post" ID="DropDownBox1" 
+                  <f:DropDownBox runat="server" Label="岗位/Post" ID="DropDownBox1" LabelWidth="110px"
                       DataControlID="RadioButtonList1" EnableMultiSelect="true" >
                     <PopPanel>
                         <f:SimpleForm ID="SimpleForm2" BodyPadding="10px" runat="server" AutoScroll="true"
@@ -47,25 +47,26 @@
             </f:FormRow>
             <f:FormRow>
                 <Items>
-                    <f:TextArea ID="txtAbstracts" runat="server" Label="内容"  ShowRedStar="true"
+                    <f:TextArea ID="txtAbstracts" runat="server" Label="内容"  ShowRedStar="true" LabelWidth="110px"
                         MaxLength="2000" Height="60px"></f:TextArea>   
                       </Items>
             </f:FormRow>
             <f:FormRow>
                 <Items>
-                    <f:TextArea ID="txtAbstractsEng" runat="server" Label="Content"  
+                    <f:TextArea ID="txtAbstractsEng" runat="server" Label="Content"   LabelWidth="110px"
                         MaxLength="2000" Height="60px"></f:TextArea>
                 </Items>
             </f:FormRow>
              <f:FormRow>
                 <Items>
-                    <f:TextArea ID="txtAbstractsRussian" runat="server" Label="Содержание"  
+                    <f:TextArea ID="txtAbstractsRussian" runat="server" Label="Содержание"   LabelWidth="110px"
                         MaxLength="2000" Height="60px"></f:TextArea>
                 </Items>
             </f:FormRow>
             <f:FormRow>
                 <Items>
-                    <f:TextBox ID="txtAItem" runat="server" Label="选项A" MaxLength="500" ShowRedStar="true" Required="true">
+                    <f:TextBox ID="txtAItem" runat="server" Label="选项A" MaxLength="500" LabelWidth="110px"
+                        ShowRedStar="true" Required="true">
                     </f:TextBox>             
                     <f:TextBox ID="txtAItemEng" runat="server" Label="Item A" MaxLength="500" >
                     </f:TextBox>
@@ -75,7 +76,8 @@
             </f:FormRow>
             <f:FormRow>
                 <Items>
-                    <f:TextBox ID="txtBItem" runat="server" Label="选项B" MaxLength="500" ShowRedStar="true" Required="true">
+                    <f:TextBox ID="txtBItem" runat="server" Label="选项B" MaxLength="500" LabelWidth="110px"
+                        ShowRedStar="true" Required="true">
                     </f:TextBox>             
                     <f:TextBox ID="txtBItemEng" runat="server" Label="Item B" MaxLength="500" >
                     </f:TextBox>
@@ -85,7 +87,7 @@
             </f:FormRow>
             <f:FormRow runat="server" ID="trC">
                 <Items>
-                    <f:TextBox ID="txtCItem" runat="server" Label="选项C" MaxLength="500">
+                    <f:TextBox ID="txtCItem" runat="server" Label="选项C" MaxLength="500" LabelWidth="110px">
                     </f:TextBox>                
                     <f:TextBox ID="txtCItemEng" runat="server" Label="Item C" MaxLength="500" >
                     </f:TextBox>
@@ -95,7 +97,7 @@
             </f:FormRow>
             <f:FormRow runat="server" ID="trD">
                 <Items>
-                    <f:TextBox ID="txtDItem" runat="server" Label="选项D" MaxLength="500">
+                    <f:TextBox ID="txtDItem" runat="server" Label="选项D" MaxLength="500" LabelWidth="110px">
                     </f:TextBox>                
                     <f:TextBox ID="txtDItemEng" runat="server" Label="Item D" MaxLength="500" >
                     </f:TextBox>
@@ -105,7 +107,7 @@
             </f:FormRow>
             <f:FormRow runat="server" ID="trE">
                 <Items>
-                    <f:TextBox ID="txtEItem" runat="server" Label="选项E" MaxLength="500">
+                    <f:TextBox ID="txtEItem" runat="server" Label="选项E" MaxLength="500" LabelWidth="110px">
                     </f:TextBox>               
                     <f:TextBox ID="txtEItemEng" runat="server" Label="Item E" MaxLength="500" >
                     </f:TextBox>
@@ -115,7 +117,8 @@
             </f:FormRow>
             <f:FormRow>
                 <Items>
-                    <f:DropDownBox runat="server" Label="答案/Answer" ID="DropDownBox2" DataControlID="RadioButtonList2" EnableMultiSelect="true">
+                    <f:DropDownBox runat="server" Label="答案/Answer" ID="DropDownBox2" DataControlID="RadioButtonList2" 
+                        EnableMultiSelect="true" ShowRedStar="true" Required="true" LabelWidth="110px">
                     <PopPanel>
                         <f:SimpleForm ID="SimpleForm3" BodyPadding="10px" runat="server" AutoScroll="true"
                             ShowBorder="True" ShowHeader="false" Hidden="true">

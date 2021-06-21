@@ -96,25 +96,40 @@ namespace FineUIPro.Web.OnlineCheck
             BLL.BuildTestService.DeleteTest(tc.WorkPostId, tc.ABVolume);
              BLL.BuildTestService.DeleteTestCondition(tc.WorkPostId, tc.ABVolume);
 
-             for (int i = 0; i < Grid1.Rows.Count(); i++)
-             {
-                 if (Grid1.Rows[i].Values[5] != null && Grid1.Rows[i].Values[5].ToString() != "")
-                 {
-                     tc.TestType = (Grid1.Rows[i].Values[1]).ToString();
-                     tc.ItemType = (Grid1.Rows[i].Values[2]).ToString();
+             //for (int i = 0; i < Grid1.Rows.Count(); i++)
+             //{
+             //    if (Grid1.Rows[i].Values[5] != null && Grid1.Rows[i].Values[5].ToString() != "")
+             //    {
+             //        tc.TestType = (Grid1.Rows[i].Values[1]).ToString();
+             //        tc.ItemType = (Grid1.Rows[i].Values[2]).ToString();
+             //        tc.SelectNumber = Convert.ToInt32(Grid1.Rows[i].Values[4]);
+             //        if (Grid1.Rows[i].Values[5] != null && Grid1.Rows[i].Values[5].ToString() != "")
+             //        {
+             //            tc.TestScore = Convert.ToInt32(Grid1.Rows[i].Values[5]);
+             //        }
+             //        BLL.BuildTestService.AddTestCondition(tc);
+             //    }
+             //}
 
-                     tc.SelectNumber = Convert.ToInt32(Grid1.Rows[i].Values[4]);
+            JArray teamGroupData = Grid1.GetMergedData();
+            foreach (JObject teamGroupRow in teamGroupData)
+            {
+                JObject values = teamGroupRow.Value<JObject>("values");               
+             
+                int? TestScore = values.Value<int?>("TestScore"); //5
+                if (TestScore.HasValue)
+                {
+                    tc.TestScore = TestScore;
+                    tc.TestType = values.Value<string>("TestType"); //1
+                    tc.ItemType = values.Value<string>("ItemType"); //2
+                    int SelectNumber = values.Value<int>("SelectNumber"); //4
+                    tc.SelectNumber = SelectNumber;                
+                    int TestTotalScore = values.Value<int>("TestTotalScore"); //5
+                    BLL.BuildTestService.AddTestCondition(tc);
+                }
+            }
 
-                     if (Grid1.Rows[i].Values[5] != null && Grid1.Rows[i].Values[5].ToString() != "")
-                     {
-                         tc.TestScore = Convert.ToInt32(Grid1.Rows[i].Values[5]);
-                     }
-
-                     BLL.BuildTestService.AddTestCondition(tc);
-                 }
-             }
-
-             BindGrid();
+            BindGrid();
              ShowNotify("生成试卷的条件保存成功！");
          }
          

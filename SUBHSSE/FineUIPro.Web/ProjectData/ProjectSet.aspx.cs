@@ -32,6 +32,12 @@ namespace FineUIPro.Web.ProjectData
                 this.ddlPageSize.SelectedValue = Grid1.PageSize.ToString();
                 // 绑定表格
                 this.BindGrid();
+                var thisUnit = BLL.CommonService.GetIsThisUnit();
+                if (thisUnit != null && thisUnit.UnitId == BLL.Const.UnitId_6)
+                {
+                    this.drpUnit.Label = "所属分公司";
+                    this.Grid1.Columns[10].HeaderText = "所属分公司";
+                }
             }
         }
         #endregion
@@ -99,13 +105,7 @@ namespace FineUIPro.Web.ProjectData
             Grid1.DataSource = table;
             Grid1.DataBind();
 
-            BLL.UnitService.InitUnitDropDownList(this.drpUnit, string.Empty, true);
-            var thisUnit = BLL.CommonService.GetIsThisUnit();
-            if (thisUnit != null && thisUnit.UnitId == BLL.Const.UnitId_6)
-            {
-                this.drpUnit.Label = "所属分公司";
-                this.Grid1.Columns[10].HeaderText = "所属分公司";
-            }
+          //  BLL.UnitService.InitUnitDropDownList(this.drpUnit, string.Empty, true);
         }
         #endregion
 

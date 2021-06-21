@@ -1,8 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThemeActivitiesEdit.aspx.cs"
     Inherits="FineUIPro.Web.SafetyActivities.ThemeActivitiesEdit" ValidateRequest="false" %>
-
-<%@ Register Src="~/Controls/FlowOperateControl.ascx" TagName="FlowOperateControl"
-    TagPrefix="uc1" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -28,7 +25,7 @@
             </f:FormRow>
             <f:FormRow>
                 <Items>                   
-                   <f:DropDownList ID="drpCompileMan" runat="server" Label="整理人" LabelAlign="Right">
+                   <f:DropDownList ID="drpCompileMan" runat="server" Label="整理人" LabelAlign="Right"  EnableEdit="true">
                     </f:DropDownList>
                     <f:TextBox ID="txtRemark" runat="server" Label="备注" LabelAlign="Right" MaxLength="1000">
                     </f:TextBox>
@@ -37,7 +34,7 @@
             <f:FormRow>
                 <Items>
                     <f:HtmlEditor runat="server" Label="内容" ID="txtSeeFile" ShowLabel="false"
-                        Editor="UMEditor" BasePath="~/res/umeditor/" ToolbarSet="Full" Height="260" LabelAlign="Right">
+                        Editor="UMEditor" BasePath="~/res/umeditor/" ToolbarSet="Full" Height="300" LabelAlign="Right">
                     </f:HtmlEditor>
                 </Items>
             </f:FormRow>            

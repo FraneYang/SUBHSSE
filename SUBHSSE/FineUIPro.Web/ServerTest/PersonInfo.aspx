@@ -30,6 +30,14 @@
                          EnableTextSelection="True">
                     </f:Tree>
                 </Items>
+                 <Toolbars>
+                    <f:Toolbar ID="Toolbar2" Position="Bottom" ToolbarAlign="Right" runat="server">
+                        <Items>
+                            <f:Button ID="btnPersonUnit" ToolTip="调整人员单位" Icon="TableRefresh" runat="server" Hidden="true" OnClick="btnPersonUnit_Click">
+                             </f:Button>                           
+                        </Items>
+                    </f:Toolbar>
+                </Toolbars>
             </f:Panel>
             <f:Panel runat="server" ID="panelCenterRegion" RegionPosition="Center" ShowBorder="true"
                 Layout="VBox" ShowHeader="false" BodyPadding="5px" IconFont="PlusCircle" Title="人员信息"
@@ -115,12 +123,7 @@
                             <f:ToolbarText ID="ToolbarText1" runat="server" Text="每页记录数：">
                             </f:ToolbarText>
                             <f:DropDownList runat="server" ID="ddlPageSize" Width="80px" AutoPostBack="true"
-                                OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
-                                <f:ListItem Text="10" Value="10" />
-                                <f:ListItem Text="15" Value="15" />
-                                <f:ListItem Text="20" Value="20" />
-                                <f:ListItem Text="25" Value="25" />
-                                <f:ListItem Text="所有行" Value="100000" />
+                                OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">                            
                             </f:DropDownList>
                             <f:Label runat="server" Text="红色表示未进行过任何培训人员。"  CssClass="LabelColor"></f:Label>
                         </PageItems>

@@ -41,7 +41,7 @@ namespace FineUIPro.Web.SafetyActivities
                 this.ThemeActivitiesId = Request.Params["ThemeActivitiesId"];
                 if (!string.IsNullOrEmpty(this.ThemeActivitiesId))
                 {
-                    Model.SafetyActivities_ThemeActivities ThemeActivities = BLL.ThemeActivitiesService.GetThemeActivitiesById(this.ThemeActivitiesId);
+                    var ThemeActivities = BLL.ThemeActivitiesService.GetThemeActivitiesById(this.ThemeActivitiesId);
                     if (ThemeActivities != null)
                     {                        
                         this.txtTitle.Text = ThemeActivities.Title;

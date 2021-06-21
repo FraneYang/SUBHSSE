@@ -69,7 +69,7 @@
                     </f:TextBox>
                 </Items>
             </f:FormRow>
-            <f:FormRow ColumnWidths="8% 92%">
+            <f:FormRow ColumnWidths="8% 90%">
                 <Items>
                     <f:Label runat="server" ID="lblImageUrl" Label="整改前图片">
                     </f:Label>
@@ -86,7 +86,7 @@
                     </f:ContentPanel>
                 </Items>
             </f:FormRow>
-            <f:FormRow ColumnWidths="8% 92%">
+            <f:FormRow ColumnWidths="8% 90%">
                 <Items>
                     <f:Label runat="server" ID="lblRectificationImageUrl" Label="整改后图片">
                     </f:Label>
@@ -103,7 +103,7 @@
                     </f:ContentPanel>
                 </Items>
             </f:FormRow>
-            <f:FormRow>
+            <f:FormRow runat="server" Hidden="true">
                 <Items>
                     <f:Grid ID="Grid1" ShowBorder="true" ShowHeader="false" runat="server" ClicksToEdit="1"
                         DataIDField="PunishRecordId" DataKeyNames="PunishRecordId" EnableMultiSelect="false"

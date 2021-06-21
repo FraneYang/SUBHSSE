@@ -194,8 +194,14 @@ namespace BLL
         /// <returns>人员的数量</returns>
         public static Model.SitePerson_Person GetPersonCountByIdentityCard(string identityCard, string projectId)
         {
-            var q = Funs.DB.SitePerson_Person.FirstOrDefault(x => x.IdentityCard == identityCard && x.ProjectId == projectId);
-            return q;
+            if (!string.IsNullOrEmpty(projectId))
+            {
+                return Funs.DB.SitePerson_Person.FirstOrDefault(x => x.IdentityCard == identityCard && x.ProjectId == projectId);
+            }
+            else
+            {
+                return Funs.DB.SitePerson_Person.FirstOrDefault(x => x.IdentityCard == identityCard && x.ProjectId == null);
+            }
         }
 
         /// <summary>

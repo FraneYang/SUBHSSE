@@ -33,6 +33,7 @@ namespace BLL
             {
                 MonthlyRatingId = MonthlyRating.MonthlyRatingId,
                 ProjectId = MonthlyRating.ProjectId,
+                UnitId= MonthlyRating.UnitId,
                 Title = MonthlyRating.Title,
                 CompileDate = MonthlyRating.CompileDate,
                 CompileMan = MonthlyRating.CompileMan,
@@ -40,7 +41,6 @@ namespace BLL
                 AttachUrl = MonthlyRating.AttachUrl,
                 SeeFile = MonthlyRating.SeeFile
             };
-
             db.SafetyActivities_MonthlyRating.InsertOnSubmit(newMonthlyRating);
             db.SubmitChanges();
         }

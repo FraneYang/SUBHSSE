@@ -49,15 +49,6 @@ namespace FineUIPro.Web.EduTrain {
         protected global::FineUIPro.TextBox txtSupTraining;
         
         /// <summary>
-        /// txtTrainingCode 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.TextBox txtTrainingCode;
-        
-        /// <summary>
         /// txtTrainingName 控件。
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace FineUIPro.Web.EduTrain {
         protected global::FineUIPro.TextBox txtTrainingName;
         
         /// <summary>
+        /// txtTrainingCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.TextBox txtTrainingCode;
+        
+        /// <summary>
         /// ckIsEndLever 控件。
         /// </summary>
         /// <remarks>
@@ -74,6 +74,60 @@ namespace FineUIPro.Web.EduTrain {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::FineUIPro.CheckBox ckIsEndLever;
+        
+        /// <summary>
+        /// GroupPanel1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.GroupPanel GroupPanel1;
+        
+        /// <summary>
+        /// Form2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.Form Form2;
+        
+        /// <summary>
+        /// drpCompany 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.DropDownList drpCompany;
+        
+        /// <summary>
+        /// drpUnit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.DropDownList drpUnit;
+        
+        /// <summary>
+        /// SelectALLUnit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.Button SelectALLUnit;
+        
+        /// <summary>
+        /// SelectNoALLUnit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.Button SelectNoALLUnit;
         
         /// <summary>
         /// drpProject 控件。

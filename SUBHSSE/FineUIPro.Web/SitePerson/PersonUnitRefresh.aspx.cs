@@ -45,17 +45,6 @@ namespace FineUIPro.Web.SitePerson
             if (!string.IsNullOrEmpty(this.CurrUser.LoginProjectId))
             {
                 string strSql = string.Empty;
-                ///在场人员出场
-                //strSql = @"SELECT PersonId,CardNo,PersonName,IdentityCard"
-                //          + @" FROM SitePerson_Person WHERE UnitId ='" + this.drpUnitId.SelectedValue + "'";
-                //List<SqlParameter> listStr = new List<SqlParameter>();
-                //strSql += " AND ProjectId = @ProjectId";
-                //listStr.Add(new SqlParameter("@ProjectId", this.CurrUser.LoginProjectId));
-                //if (!string.IsNullOrEmpty(this.CurrUser.UnitId))
-                //{
-                //    strSql += " AND UnitId = @UnitId";
-                //    listStr.Add(new SqlParameter("@UnitId", this.drpUnitId.SelectedValue));
-                //}
                 strSql = @"SELECT PersonId,CardNo,PersonName,IdentityCard FROM SitePerson_Person"
                        + @" WHERE  ProjectId = @ProjectId ";
                 List<SqlParameter> listStr = new List<SqlParameter>();
@@ -84,7 +73,6 @@ namespace FineUIPro.Web.SitePerson
                 DataTable tb = SQLHelper.GetDataTableRunText(strSql, parameter);
 
                 Grid1.RecordCount = tb.Rows.Count;
-                tb = GetFilteredTable(Grid1.FilteredData, tb);
                 var table = this.GetPagedDataTable(Grid1, tb);
                 Grid1.DataSource = table;
                 Grid1.DataBind();

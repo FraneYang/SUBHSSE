@@ -61,6 +61,34 @@
         }
 
         /// <summary>
+        ///  项目名称 -换行
+        /// </summary>
+        /// <param name="projectIds"></param>
+        /// <returns></returns>
+        public static string GetProjectNames2ByProjectIds(string projectIds)
+        {
+            string names = string.Empty;
+            if (projectIds != null)
+            {
+                string[] roles = projectIds.ToString().Split(',');
+                foreach (string roleId in roles)
+                {
+                    var q = GetProjectNameByProjectId(roleId);
+                    if (!string.IsNullOrEmpty(q))
+                    {
+                        names += q + "</br>";
+                    }
+                }
+                if (names != string.Empty)
+                {
+                    names = names.Substring(0, names.Length - 1); ;
+                }
+            }
+
+            return names;
+        }
+
+        /// <summary>
         /// 增加项目信息
         /// </summary>
         /// <returns></returns>
@@ -191,7 +219,7 @@
                         select x).ToList();
             return list;
         }
-
+        
         /// <summary>
         /// 获取施工中月总结项目集合
         /// </summary>
@@ -351,6 +379,26 @@
             }
         }
 
+        /// <summary>
+        ///  单位下项目表下拉框
+        /// </summary>
+        /// <param name="dropName">下拉框名字</param>
+        /// <param name="unitId">单位</param>
+        /// <param name="isShowPlease">是否显示请选择</param>
+        public static void InitProjectByUnitIdListDropDownList(FineUIPro.DropDownList dropName, string[] unitIdList, bool isShowPlease)
+        {
+            dropName.DataValueField = "ProjectId";
+            dropName.DataTextField = "ProjectName";
+            dropName.DataSource = (from x in Funs.DB.Base_Project
+                                   where unitIdList.Contains(x.UnitId ) && (x.ProjectState == null || x.ProjectState == BLL.Const.ProjectState_1)
+                                   orderby x.ProjectName
+                                   select x).ToList(); 
+            dropName.DataBind();
+            if (isShowPlease)
+            {
+                Funs.FineUIPleaseSelect(dropName);
+            }
+        }
 
         /// <summary>
         ///  非设计项目表下拉框

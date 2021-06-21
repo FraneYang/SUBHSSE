@@ -375,6 +375,7 @@
     <Content Include="EduTrain\TestTrainingItemIn.aspx" />
     <Content Include="EduTrain\TestTrainingItemSave.aspx" />
     <Content Include="EduTrain\TestTrainingOut.aspx" />
+    <Content Include="EduTrain\TestTrainingView.aspx" />
     <Content Include="EduTrain\TestTrainingSave.aspx" />
     <Content Include="EduTrain\TestTrainRecord.aspx" />
     <Content Include="EduTrain\TrainingSelectCloumn.aspx" />
@@ -555,6 +556,7 @@
     <Content Include="Manager\ProjectSafeReport.aspx" />
     <Content Include="Manager\SubUploadWeek.aspx" />
     <Content Include="Manager\SubUploadWeekEdit.aspx" />
+    <Content Include="OnlineCheck\BuildTest.aspx" />
     <Content Include="Personal\APPFile.aspx" />
     <Content Include="Personal\FileSearch.aspx" />
     <Content Include="ProjectAccident\AccidentData.aspx" />
@@ -649,6 +651,7 @@
     <Content Include="ServerTest\PersonInfo.aspx" />
     <Content Include="ServerTest\PersonInfoEdit.aspx" />
     <Content Include="ServerTest\PersonInProject.aspx" />
+    <Content Include="ServerTest\PersonUnitRefresh.aspx" />
     <Content Include="ServerTest\TrainRecord.aspx" />
     <Content Include="ServerTest\TrainRecordView.aspx" />
     <Content Include="Service References\HSSEService\FineUIPro.Web.HSSEService.Base_Unit.datasource">
@@ -1829,7 +1832,6 @@
     <Content Include="OfficeControl\OfficeControl.cab" />
     <Content Include="OfficeControl\OfficeControl.ocx" />
     <Content Include="OfficeControl\signtoolcontrol.js" />
-    <Content Include="OnlineCheck\BuildTest.aspx" />
     <Content Include="OnlineCheck\Examinee.aspx" />
     <Content Include="OnlineCheck\SeeTest.aspx" />
     <Content Include="OnlineCheck\TestDB.aspx" />
@@ -5880,6 +5882,13 @@
     <Compile Include="EduTrain\TestTrainingOut.aspx.designer.cs">
       <DependentUpon>TestTrainingOut.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EduTrain\TestTrainingView.aspx.cs">
+      <DependentUpon>TestTrainingView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EduTrain\TestTrainingView.aspx.designer.cs">
+      <DependentUpon>TestTrainingView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EduTrain\TestTrainingSave.aspx.cs">
       <DependentUpon>TestTrainingSave.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7119,6 +7128,13 @@
     <Compile Include="Manager\SubUploadWeekEdit.aspx.designer.cs">
       <DependentUpon>SubUploadWeekEdit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OnlineCheck\BuildTest.aspx.cs">
+      <DependentUpon>BuildTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineCheck\BuildTest.aspx.designer.cs">
+      <DependentUpon>BuildTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Personal\APPFile.aspx.cs">
       <DependentUpon>APPFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7622,6 +7638,13 @@
     </Compile>
     <Compile Include="ServerTest\PersonInProject.aspx.designer.cs">
       <DependentUpon>PersonInProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerTest\PersonUnitRefresh.aspx.cs">
+      <DependentUpon>PersonUnitRefresh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerTest\PersonUnitRefresh.aspx.designer.cs">
+      <DependentUpon>PersonUnitRefresh.aspx</DependentUpon>
     </Compile>
     <Compile Include="ServerTest\TrainRecord.aspx.cs">
       <DependentUpon>TrainRecord.aspx</DependentUpon>
@@ -10056,13 +10079,6 @@
     </Compile>
     <Compile Include="LogOff.aspx.designer.cs">
       <DependentUpon>LogOff.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="OnlineCheck\BuildTest.aspx.cs">
-      <DependentUpon>BuildTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="OnlineCheck\BuildTest.aspx.designer.cs">
-      <DependentUpon>BuildTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="OnlineCheck\Examinee.aspx.cs">
       <DependentUpon>Examinee.aspx</DependentUpon>

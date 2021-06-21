@@ -1269,6 +1269,29 @@ namespace BLL
         public const string ServerFileCabinetBMenuId = "DDD1CE30-F8B9-4011-A20F-7AC60B34788C";
         #endregion
 
+        #region 安全活动
+        /// <summary>
+        /// 主题安全活动
+        /// </summary>
+        public const string ServerThemeActivitiesMenuId = "21D4AD3E-8679-4893-A664-FDEBDBD143E3";
+        /// <summary>
+        /// 月度安全评比
+        /// </summary>
+        public const string ServerMonthlyRatingMenuId = "3C97B279-4A65-4A97-8A0A-713D06C9EFF9";
+        /// <summary>
+        /// 全国安全月
+        /// </summary>
+        public const string ServerSafetyMonthMenuId = "76E3E95A-AC45-4A9A-A5E9-63CDB9A9CF40";
+        /// <summary>
+        /// 119消防
+        /// </summary>
+        public const string ServerFireActivitiesMenuId = "30FFE3A8-6FF6-4D94-84B3-CE2A2085C1AA";
+        /// <summary>
+        /// 其他
+        /// </summary>
+        public const string ServerOtherActivitiesMenuId = "8E19AA90-C2A8-4ED6-B325-613E546F7BF8";
+        #endregion
+
         #region 人员培训与考试
         /// <summary>
         /// 人员信息

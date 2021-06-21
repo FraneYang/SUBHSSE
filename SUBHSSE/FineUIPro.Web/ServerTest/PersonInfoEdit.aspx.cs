@@ -252,10 +252,9 @@ namespace FineUIPro.Web.ServerTest
                 if (!string.IsNullOrEmpty(this.txtCardNo.Text.Trim()))
                 {
                     int cardNoCount = BLL.PersonService.GetPersonCountByCardNo(null, this.txtCardNo.Text.Trim());
-
                     if (cardNoCount > 0)
                     {
-                        ShowNotify("此卡号已存在，不能重复！", MessageBoxIcon.Warning);
+                        Alert.ShowInTop("此卡号已存在，不能重复！", MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -266,7 +265,7 @@ namespace FineUIPro.Web.ServerTest
                     var identityCardCount = PersonService.GetPersonCountByIdentityCard(this.txtIdentityCard.Text.Trim(), this.CurrUser.LoginProjectId);
                     if (identityCardCount != null)
                     {
-                        ShowNotify("此身份证号已存在，不能重复！", MessageBoxIcon.Warning);
+                        Alert.ShowInTop("此身份证号已存在，不能重复！", MessageBoxIcon.Warning);
                         return;
                     }
                 }

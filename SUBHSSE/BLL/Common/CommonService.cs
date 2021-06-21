@@ -385,7 +385,7 @@ namespace BLL
                 var user = BLL.UserService.GetUserByUserId(userId);
                 if (user != null)
                 {
-                    Model.Base_Unit unit = BLL.UnitService.GetUnitByUnitId(user.UnitId);
+                    var unit = BLL.UnitService.GetUnitByUnitId(user.UnitId);
                     if (unit != null && unit.IsThisUnit == true)
                     {
                         result = true;
@@ -985,6 +985,94 @@ namespace BLL
             }
         }
 
+        #endregion
+
+        #region 绑定本部 单位-项目树
+        /// <summary>
+        ///  绑定本部 单位-项目树
+        /// </summary>
+        /// <param name="tvProjectAndUnit"></param>
+        /// <param name="CurrUser"></param>
+        public static void SetUnitProjectTree(FineUIPro.Tree tvProjectAndUnit, Model.Sys_User CurrUser)
+        {
+            tvProjectAndUnit.Nodes.Clear();
+            if (CommonService.IsMainUnitOrAdmin(CurrUser.UserId))
+            {
+                var thisUnit = CommonService.GetIsThisUnit();
+                if (thisUnit != null)
+                {
+                    FineUIPro.TreeNode rootNode = new FineUIPro.TreeNode
+                    {
+                        Text = thisUnit.UnitName,
+                        NodeID = thisUnit.UnitId,
+                        EnableClickEvent = true
+                    };
+                    tvProjectAndUnit.Nodes.Add(rootNode);
+
+                    var getProjects = ProjectService.GetProjectWorkByUnitIdList(thisUnit.UnitId);
+                    foreach (var item in getProjects)
+                    {
+                        FineUIPro.TreeNode drootNode = new FineUIPro.TreeNode
+                        {
+                            Text = item.ProjectName,
+                            NodeID = item.ProjectId,
+                            EnableClickEvent = true
+                        };
+                        rootNode.Nodes.Add(drootNode);
+                    }
+
+                    var getSubUnit = from x in Funs.DB.Base_Unit where x.SupUnitId == thisUnit.UnitId select x;
+                    foreach (var item in getSubUnit)
+                    {
+                        FineUIPro.TreeNode crootNode = new FineUIPro.TreeNode
+                        {
+                            Text = item.UnitName,
+                            NodeID = item.UnitId,
+                            EnableClickEvent = true
+                        };
+                        tvProjectAndUnit.Nodes.Add(crootNode);
+
+                        var getSProjects = ProjectService.GetProjectWorkByUnitIdList(item.UnitId);
+                        foreach (var sitem in getSProjects)
+                        {
+                            FineUIPro.TreeNode scrootNode = new FineUIPro.TreeNode
+                            {
+                                Text = sitem.ProjectName,
+                                NodeID = sitem.ProjectId,
+                                EnableClickEvent = true
+                            };
+                            crootNode.Nodes.Add(scrootNode);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                var getSubUnit = Funs.DB.Base_Unit.FirstOrDefault(x => x.UnitId == CurrUser.UnitId);
+                if (getSubUnit != null)
+                {
+                    FineUIPro.TreeNode crootNode = new FineUIPro.TreeNode
+                    {
+                        Text = getSubUnit.UnitName,
+                        NodeID = getSubUnit.UnitId,
+                        EnableClickEvent = true
+                    };
+                    tvProjectAndUnit.Nodes.Add(crootNode);
+
+                    var getSProjects = ProjectService.GetProjectWorkByUnitIdList(getSubUnit.UnitId);
+                    foreach (var sitem in getSProjects)
+                    {
+                        FineUIPro.TreeNode scrootNode = new FineUIPro.TreeNode
+                        {
+                            Text = sitem.ProjectName,
+                            NodeID = sitem.ProjectId,
+                            EnableClickEvent = true
+                        };
+                        crootNode.Nodes.Add(scrootNode);
+                    }
+                }
+            }
+        }
         #endregion
     }
 }

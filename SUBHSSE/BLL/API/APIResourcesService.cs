@@ -209,7 +209,7 @@ namespace BLL
         /// </summary>
         /// <param name="supTypeId"></param>
         /// <returns></returns>
-        public static List<Model.ResourcesItem> getTestTrainingListBySupTrainingId(string supTypeId, string projectId, int pageIndex)
+        public static List<Model.ResourcesItem> getTestTrainingListBySupTrainingId(string supTypeId, string unitId,string projectId, int pageIndex)
         {
             using (Model.SUBHSSEDB db = new Model.SUBHSSEDB(Funs.ConnString))
             {
@@ -220,6 +220,8 @@ namespace BLL
                                    select new Model.ResourcesItem
                                    {
                                        ResourcesId = x.TrainingId,
+                                       CompanyId=x.CompanyId,
+                                       UnitId = x.UnitIds,
                                        ProjectId = x.ProjectId,
                                        ResourcesCode = x.TrainingCode,
                                        ResourcesName = getTrainingName(x.TrainingId),
@@ -230,6 +232,26 @@ namespace BLL
                 {
                     getDataLists = getDataLists.Where(x => x.SupResourcesId == supTypeId);
                 }
+
+                if (!string.IsNullOrEmpty(projectId))
+                {
+                    getDataLists = getDataLists.Where(x => x.ProjectId.Contains(projectId));
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(unitId))
+                    {
+                        if (CommonService.GetIsThisUnit(unitId))
+                        {
+                            getDataLists = getDataLists.Where(x => x.CompanyId == unitId);
+                        }
+                        else
+                        {
+                            getDataLists = getDataLists.Where(x => x.UnitId.Contains(unitId));
+                        }
+                    }
+                }
+               
                 if (!string.IsNullOrEmpty(projectId))
                 {
                     getDataLists = getDataLists.Where(x => x.ProjectId.Contains(projectId));

@@ -398,7 +398,7 @@ namespace BLL
             {
                 var getData = (from x in db.Training_TestRecordItem
                                where x.TestRecordId == testRecordId
-                            orderby x.TestType, x.TrainingItemCode
+                            orderby x.TestType, x.TestRecordItemId
                                select new Model.TestRecordItemItem
                                {
                                    TestRecordItemId = x.TestRecordItemId,

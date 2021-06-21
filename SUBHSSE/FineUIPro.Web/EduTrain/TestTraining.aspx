@@ -99,24 +99,6 @@
                              <f:RenderField ColumnID="TestTypeName" DataField="TestTypeName" SortField="TestTypeName" 
                                 Width="70px"  FieldType="String" HeaderText="题型" HeaderTextAlign="Center" TextAlign="left">
                             </f:RenderField>  
-                            <%-- <f:RenderField Width="200px" ColumnID="AItem" DataField="AItem" FieldType="String"
-                                HeaderText="答案项A" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>
-                            <f:RenderField Width="200px" ColumnID="BItem" DataField="BItem" FieldType="String"
-                                HeaderText="答案项B" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>   
-                             <f:RenderField Width="200px" ColumnID="CItem" DataField="CItem" FieldType="String"
-                                HeaderText="答案项C" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>   
-                             <f:RenderField Width="200px" ColumnID="DItem" DataField="DItem" FieldType="String"
-                                HeaderText="答案项D" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>   
-                             <f:RenderField Width="200px" ColumnID="EItem" DataField="EItem" FieldType="String"
-                                HeaderText="答案项E" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>   
-                             <f:RenderField Width="90px" ColumnID="AnswerItems" DataField="AnswerItems" FieldType="String"
-                                HeaderText="正确答案项" HeaderTextAlign="Center" TextAlign="Left">
-                            </f:RenderField>  --%>
                         </Columns>
                         <Listeners>
                             <f:Listener Event="beforerowcontextmenu" Handler="onRowContextMenu" />
@@ -127,12 +109,7 @@
                             <f:ToolbarText ID="ToolbarText1" runat="server" Text="每页记录数：">
                             </f:ToolbarText>
                             <f:DropDownList runat="server" ID="ddlPageSize" Width="80px" AutoPostBack="true"
-                                OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
-                                <f:ListItem Text="10" Value="10" />
-                                <f:ListItem Text="15" Value="15" />
-                                <f:ListItem Text="20" Value="20" />
-                                <f:ListItem Text="25" Value="25" />
-                                <f:ListItem Text="所有行" Value="10000" />
+                                OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">                             
                             </f:DropDownList>
                         </PageItems>
                     </f:Grid>
@@ -146,7 +123,7 @@
     </f:Window>
     <f:Window ID="Window2" Title="考试试题科详情" Hidden="true" EnableIFrame="true" EnableMaximize="true"
         Target="Parent" EnableResize="true" runat="server" OnClose="Window2_Close" IsModal="true"
-        Width="1000px" Height="560px">
+        Width="1200px" Height="620px">
     </f:Window>   
      <f:Window ID="Window3" Title="导入信息" Hidden="true" EnableIFrame="true" EnableMaximize="true"
         Target="Parent" EnableResize="true" runat="server" OnClose="Window3_Close" IsModal="false"
@@ -167,6 +144,9 @@
         </f:MenuButton>
         <f:MenuButton ID="btnTreeMenuEdit" OnClick="btnTreeMenuEdit_Click" EnablePostBack="true"
             runat="server" Text="编辑" Hidden="true" Icon="TableEdit">
+        </f:MenuButton>
+           <f:MenuButton ID="btnFind" OnClick="btnFind_Click" EnablePostBack="true"
+            runat="server" Text="查看"  Icon="Find">
         </f:MenuButton>
         <f:MenuButton ID="btnTreeMenuDelete" OnClick="btnTreeMenuDelete_Click" EnablePostBack="true"
             Icon="Delete" ConfirmText="删除选中节点？" ConfirmTarget="Parent" runat="server" Text="删除"

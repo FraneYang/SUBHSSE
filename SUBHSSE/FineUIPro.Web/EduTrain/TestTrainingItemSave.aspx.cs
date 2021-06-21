@@ -242,6 +242,11 @@ namespace FineUIPro.Web.EduTrain
         /// </summary>
         private void SaveData(bool isClosed)
         {
+            if (!string.IsNullOrEmpty(DropDownBox2.Text))
+            {
+                Alert.ShowInTop("请填写答案/Answer", MessageBoxIcon.Warning);
+                return;
+            }
             Model.Training_TestTrainingItem trainingItem = new Training_TestTrainingItem
             {
                 TrainingItemCode = txtTrainingItemCode.Text.Trim(),

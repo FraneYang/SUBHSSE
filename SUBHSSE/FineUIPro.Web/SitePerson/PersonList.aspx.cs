@@ -55,6 +55,7 @@ namespace FineUIPro.Web.SitePerson
             FilterDataRowItem = FilterDataRowItemImplement;
             if (!IsPostBack)
             {
+                Funs.DropDownPageSize(this.ddlPageSize);
                 this.ProjectId = this.CurrUser.LoginProjectId;
                 if (!string.IsNullOrEmpty(Request.Params["projectId"]) && Request.Params["projectId"] != this.ProjectId)
                 {

@@ -5,7 +5,6 @@
     </TreeNode>
 <TreeNode id="EB9C4E5E-15DB-426A-9800-6B03E64EC5DE" Text="项目单位" NavigateUrl="ProjectData/ProjectUnit.aspx" Icon="Page"></TreeNode>
 <TreeNode id="0CF5F6A1-4AEB-4034-9C3B-591838E1290A" Text="项目用户" NavigateUrl="ProjectData/ProjectUser.aspx" Icon="Page"></TreeNode>
-<TreeNode id="C73EC3F3-6743-4A09-8433-E7DCC22E88C0" Text="项目地图" NavigateUrl="ProjectData/ProjectMap.aspx" Icon="Page"></TreeNode>
 </TreeNode>
 <TreeNode id="2572CDC8-BA26-4C74-B6F7-CB3D63E91E72" Text="安全体系" NavigateUrl="" Icon="LayoutContent"><TreeNode id="8IDKGJE2-09B1-6UIO-3EFM-5TGED48F0001" Text="安全组织体系" NavigateUrl="HSSESystem/HSSEOrganize.aspx" Icon="Page"></TreeNode>
 <TreeNode id="32F5CC8C-E0F4-456C-AB88-77E36269FA50" Text="安全管理机构" NavigateUrl="HSSESystem/HSSEManage.aspx" Icon="Page"></TreeNode>
@@ -17,12 +16,6 @@
 <TreeNode id="7985C759-8EB9-4B7D-AC65-00541280B46C" Text="应急演练开展情况季报" NavigateUrl="Information/DrillConductedQuarterlyReport.aspx" Icon="Page"></TreeNode>
 <TreeNode id="70DEB27A-D6FF-4D57-879B-0270F2967FA0" Text="应急演练工作计划半年报" NavigateUrl="Information/DrillPlanHalfYearReport.aspx" Icon="Page"></TreeNode>
 </TreeNode>
-<TreeNode id="D17F199E-D6A6-4669-8D1D-7857DD8750CA" Text="分公司安全信息" NavigateUrl="" Icon="Report"><TreeNode id="73D51CC9-044A-4A1C-B9E6-648EDC393F4F" Text="百万工时安全统计月报" NavigateUrl="Information/SubMillionsMonthlyReport.aspx" Icon="Page"></TreeNode>
-<TreeNode id="85AE7EDB-ABAE-4BC4-A8FA-A9EB835A5304" Text="职工伤亡事故原因分析报" NavigateUrl="Information/SubAccidentCauseReport.aspx" Icon="Page"></TreeNode>
-<TreeNode id="DCF198C4-44B2-41CD-9436-8A8B4B733680" Text="安全生产数据季报" NavigateUrl="Information/SubSafetyQuarterlyReport.aspx" Icon="Page"></TreeNode>
-<TreeNode id="F9B562A7-8EC1-4988-AEDB-781BDD228251" Text="应急演练开展情况季报" NavigateUrl="Information/SubDrillConductedQuarterlyReport.aspx" Icon="Page"></TreeNode>
-<TreeNode id="F4B84DC6-2284-45E4-9765-468A17132411" Text="应急演练工作计划半年报" NavigateUrl="Information/SubDrillPlanHalfYearReport.aspx" Icon="Page"></TreeNode>
-</TreeNode>
 <TreeNode id="C0F4A4A5-D5D3-4952-9A90-9B27F5FA9DFA" Text="安全信息分析" NavigateUrl="" Icon="ChartBar"><TreeNode id="598568A0-A338-499F-888C-1B73665837F9" Text="人工时费用分析" NavigateUrl="Information/AnalyseWorkTimeCost.aspx" Icon="Page"></TreeNode>
 <TreeNode id="8396C9E2-3376-4144-978A-CC6041EC6C6A" Text="安全事故分析" NavigateUrl="Information/AnalyseSafeAccident.aspx" Icon="Page"></TreeNode>
 <TreeNode id="5B645281-A055-4AA1-9245-DACBD984C76F" Text="安全隐患分析" NavigateUrl="Information/AnalyseHiddenDanger.aspx" Icon="Page"></TreeNode>
@@ -30,16 +23,9 @@
 </TreeNode>
 </TreeNode>
 <TreeNode id="70E51ABF-81C8-49CB-89AC-CF0542A201D6" Text="安全管理工作报告" NavigateUrl="" Icon="CalendarEdit"><TreeNode id="26CE4208-7DEE-46A2-A1D2-9C182D9C1DFC" Text="管理月报" NavigateUrl="ManagementReport/MonthReport.aspx" Icon="BorderDraw"></TreeNode>
-<TreeNode id="B995396A-B01C-4F03-858A-FFDC853BA4B8" Text="管理月报TCC" NavigateUrl="ManagementReport/MonthReportB.aspx" Icon="BorderDraw"></TreeNode>
-<TreeNode id="02ECC264-707D-412D-B74A-E2C2F2704BFA" Text="安全数据汇总" NavigateUrl="ManagementReport/ManagerStatistic.aspx" Icon="LayoutSidebar"></TreeNode>
-<TreeNode id="0E7FB959-A955-4F89-BF9F-023BD3CCD3CF" Text="月报与集团报表校对" NavigateUrl="ManagementReport/ReportCheck.aspx" Icon="LayoutSidebar"></TreeNode>
-<TreeNode id="49CD6BDA-5C82-49D1-B1D1-3F2F4082C725" Text="海外工程项目月度安全统计表" NavigateUrl="ManagementReport/MonthReportE.aspx" Icon="BorderDraw"></TreeNode>
 <TreeNode id="8051C9AA-801D-4001-9CB6-833CB407A169" Text="HSSE月总结" NavigateUrl="Manager/ManagerTotalMonthServer.aspx" Icon="LayoutSidebar"></TreeNode>
 <TreeNode id="D67D1C85-3798-47A9-A0DB-B4DB47FF2E7D" Text="报表上报情况" NavigateUrl="ManagementReport/ReportRemind.aspx" Icon="LayoutSidebar"></TreeNode>
 <TreeNode id="7FCDEC52-9665-4F92-BCC1-E518924D6728" Text="安全生产月报" NavigateUrl="ManagementReport/MonthReportD.aspx" Icon="BorderDraw"></TreeNode>
-<TreeNode id="306A1C97-B6B1-4AE4-AFC1-6933E821C129" Text="项目安全文件上报" NavigateUrl="ManagementReport/ServerSafeReport.aspx" Icon="LayoutContent"></TreeNode>
-<TreeNode id="2C673125-AAA4-4F41-A827-0F04DFE55DED" Text="分公司安全文件上报" NavigateUrl="ManagementReport/ServerSafeUnitReport.aspx" Icon="LayoutContent"></TreeNode>
-<TreeNode id="CB9F7531-1CC6-475D-82D3-0EE8BB225C28" Text="安全费用管理" NavigateUrl="CostGoods/ServerHSSECostManage.aspx" Icon="CalendarSelectWeek"></TreeNode>
 </TreeNode>
 <TreeNode id="CD9FC4C8-4B02-4619-8B02-50DA6AE6146E" Text="企业安全大检查" NavigateUrl="" Icon="DateMagnify"><TreeNode id="1C6F9CA9-FDAC-4CE5-A19C-5536538851E1" Text="安全监督检查报告" NavigateUrl="Supervise/SuperviseCheckReport.aspx" Icon="BorderDraw"></TreeNode>
 <TreeNode id="55976B16-2C33-406E-B514-2FE42D031071" Text="安全监督检查整改" NavigateUrl="Supervise/SuperviseCheckRectify.aspx" Icon="LayoutSidebar"></TreeNode>
@@ -63,28 +49,19 @@
 </TreeNode>
 <TreeNode id="192147D8-FFD1-44BD-8BC4-9DCA3E73D708" Text="安全事故" NavigateUrl="" Icon="BookError"><TreeNode id="DC871FCA-FBA8-4533-B5D6-DF64BCE40287" Text="事故快报" NavigateUrl="ProjectAccident/AccidentReport.aspx" Icon="Page"></TreeNode>
 <TreeNode id="BE2F6161-7C17-41FF-A314-8C0AE323D5A4" Text="事故处理" NavigateUrl="ProjectAccident/AccidentStatistics.aspx" Icon="Page"></TreeNode>
-<TreeNode id="6F2C0F0A-3CF6-4B28-AFE2-FB7415ECDB91" Text="事故台账" NavigateUrl="ProjectAccident/AccidentData.aspx" Icon="Page"></TreeNode>
 <TreeNode id="71A5556F-1590-4D4C-9A31-703DCD5C2910" Text="事故统计" NavigateUrl="ProjectAccident/AccidentAnalysis.aspx" Icon="Page"></TreeNode>
+</TreeNode>
+<TreeNode id="425AF991-B552-4CE3-A871-0311C7EBF9C3" Text="安全活动" NavigateUrl="" Icon="FlagYellow"><TreeNode id="21D4AD3E-8679-4893-A664-FDEBDBD143E3" Text="主题安全活动" NavigateUrl="SafetyActivities/ThemeActivities.aspx" Icon="PageHeaderFooter"></TreeNode>
+<TreeNode id="3C97B279-4A65-4A97-8A0A-713D06C9EFF9" Text="月度安全评比" NavigateUrl="SafetyActivities/MonthlyRating.aspx" Icon="PageHeaderFooter"></TreeNode>
+<TreeNode id="76E3E95A-AC45-4A9A-A5E9-63CDB9A9CF40" Text="全国安全月" NavigateUrl="SafetyActivities/SafetyMonth.aspx" Icon="PageHeaderFooter"></TreeNode>
+<TreeNode id="30FFE3A8-6FF6-4D94-84B3-CE2A2085C1AA" Text="119消防" NavigateUrl="SafetyActivities/FireActivities.aspx" Icon="PageHeaderFooter"></TreeNode>
+<TreeNode id="8E19AA90-C2A8-4ED6-B325-613E546F7BF8" Text="其他" NavigateUrl="SafetyActivities/OtherActivities.aspx" Icon="PageHeaderFooter"></TreeNode>
 </TreeNode>
 <TreeNode id="3CF6CF02-6994-4D90-9061-E4D837AA5FDA" Text="信息管理" NavigateUrl="" Icon="ComputerMagnify"><TreeNode id="E2F56879-5337-4BEF-8113-62845DF616EF" Text="管理通知" NavigateUrl="InformationProject/Notice.aspx" Icon="Page"></TreeNode>
 <TreeNode id="278DF0FE-35E2-470F-9AE4-23C57EDF797F" Text="项目图片" NavigateUrl="InformationProject/Picture.aspx" Icon="Page"></TreeNode>
 </TreeNode>
-<TreeNode id="0987D15D-3A2B-4B59-953A-A30B661E225A" Text="项目安全管理资料" NavigateUrl="" Icon="Folder"><TreeNode id="60E00925-3357-441E-BD2F-2DF8C91BDDE6" Text="资料目录设置" NavigateUrl="SafetyData/SafetyData.aspx" Icon="Page"></TreeNode>
-<TreeNode id="039BD08A-9C38-4C28-81EE-A6CA86F580B2" Text="考核计划总表" NavigateUrl="SafetyData/SafetyDataPlan.aspx" Icon="Page"></TreeNode>
-<TreeNode id="74A51BC9-EE10-4534-A4A7-37889B07753C" Text="项目上报资料" NavigateUrl="SafetyData/ProjectSafetyData.aspx" Icon="Page"></TreeNode>
-<TreeNode id="A139FF69-8B74-489B-AB5F-526B2207DD89" Text="公司安全人工时管理" NavigateUrl="SafetyData/AccidentData.aspx" Icon="ApplicationFormMagnify"></TreeNode>
-<TreeNode id="1364D490-6614-4E0D-8BF8-EEFAE2B26AE7" Text="管理台账" NavigateUrl="SafetyData/AccidentStatisc.aspx" Icon="ApplicationFormMagnify"></TreeNode>
-</TreeNode>
-<TreeNode id="08E34E86-1B8C-410A-AB73-16203001D79D" Text="E项目安全管理资料" NavigateUrl="" Icon="FolderFont"><TreeNode id="5786468C-3EB3-4219-8121-70F603E48A1A" Text="资料目录设置" NavigateUrl="SafetyDataE/SafetyDataE.aspx" Icon="Page"></TreeNode>
-<TreeNode id="F29C7286-446D-49CC-AB6B-40CA48132CB8" Text="考核计划总表" NavigateUrl="SafetyDataE/SafetyDataEPlan.aspx" Icon="Page"></TreeNode>
-<TreeNode id="CDEFCAB5-328C-406B-9551-435250C84D1D" Text="项目上报资料" NavigateUrl="SafetyDataE/ProjectSafetyDataE.aspx" Icon="Page"></TreeNode>
-</TreeNode>
 <TreeNode id="C4BD5635-39BC-4DE8-85CF-652B2C33CBB4" Text="文件柜" NavigateUrl="" Icon="LaptopMagnify"><TreeNode id="6621CF4A-EAD4-40AF-9FFE-51DA4348C10C" Text="文件柜A(检查类)" NavigateUrl="InformationProject/FileCabinetA.aspx" Icon="Page"></TreeNode>
 <TreeNode id="DDD1CE30-F8B9-4011-A20F-7AC60B34788C" Text="文件柜B(内业)" NavigateUrl="InformationProject/FileCabinetB.aspx" Icon="Page"></TreeNode>
-</TreeNode>
-<TreeNode id="397E64C8-B092-4A6A-B4D6-6B9A525448BD" Text="项目考勤" NavigateUrl="" Icon="ApplicationForm"><TreeNode id="D0E2C9C6-58FA-4316-B634-65267C709F5E" Text="现场考勤记录" NavigateUrl="Door/InOutRecord.aspx" Icon="Page"></TreeNode>
-<TreeNode id="6D0CCC58-2152-4D56-A95A-47F19D962E8C" Text="项目人工时" NavigateUrl="Door/InOutManHours.aspx" Icon="Page"></TreeNode>
-<TreeNode id="C1562943-6B79-438E-B0D7-95CD159360CA" Text="视频监控" NavigateUrl="Door/VideoMonitor.aspx" Icon="Page"></TreeNode>
 </TreeNode>
 <TreeNode id="6E3101D6-7A1C-4047-B372-1758E884372E" Text="人员培训与考试" NavigateUrl="" Icon="TableEdit"><TreeNode id="939B6481-75E3-4CEA-B248-5FB069797094" Text="人员信息" NavigateUrl="ServerTest/PersonInfo.aspx" Icon="PageHeaderFooter"></TreeNode>
 <TreeNode id="335D6EA7-B6A1-4065-A9C8-6DB5C2E3FE08" Text="培训计划" NavigateUrl="EduTrain/Plan.aspx" Icon="PageHeaderFooter"></TreeNode>

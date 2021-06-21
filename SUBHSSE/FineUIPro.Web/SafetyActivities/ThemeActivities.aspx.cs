@@ -11,6 +11,37 @@ namespace FineUIPro.Web.SafetyActivities
 {
     public partial class ThemeActivities : PageBase
     {
+        #region 定义项
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public string UnitId
+        {
+            get
+            {
+                return (string)ViewState["UnitId"];
+            }
+            set
+            {
+                ViewState["UnitId"] = value;
+            }
+        }
+        /// <summary>
+        /// 项目主键
+        /// </summary>
+        public string ProjectId
+        {
+            get
+            {
+                return (string)ViewState["ProjectId"];
+            }
+            set
+            {
+                ViewState["ProjectId"] = value;
+            }
+        }
+        #endregion
+
         #region 加载
         /// <summary>
         /// 加载页面
@@ -21,18 +52,26 @@ namespace FineUIPro.Web.SafetyActivities
         {
             if (!IsPostBack)
             {
+                Funs.DropDownPageSize(this.ddlPageSize);
+                this.ProjectId = this.CurrUser.LoginProjectId;
+                this.UnitId = string.Empty;
                 ////权限按钮方法
                 this.GetButtonPower();
-                this.btnNew.OnClientClick = Window1.GetShowReference("ThemeActivitiesEdit.aspx") + "return false;";
                 if (this.CurrUser != null && this.CurrUser.PageSize.HasValue)
                 {
-                    Grid1.PageSize = this.CurrUser.PageSize.Value;
+                    Grid1.PageSize = this.CurrUser.PageSize.Value;                    
                 } 
                 this.ddlPageSize.SelectedValue = Grid1.PageSize.ToString();
-                // 绑定表格
-                this.BindGrid();                
+                if (!string.IsNullOrEmpty(this.CurrUser.LoginProjectId))
+                {
+                    this.panelLeftRegion.Hidden = true;
+                    this.BindGrid();
+                }
+                ////加载树
+                CommonService.SetUnitProjectTree(this.tvProjectAndUnit, this.CurrUser);
             }
         }
+
         /// <summary>
         /// 绑定数据
         /// </summary>
@@ -43,16 +82,17 @@ namespace FineUIPro.Web.SafetyActivities
                           + @" LEFT JOIN Sys_User AS Users ON T.CompileMan=Users.UserId"
                           + @" WHERE 1=1 ";
             List<SqlParameter> listStr = new List<SqlParameter>();
-            strSql += " AND ProjectId = @ProjectId";
-            if (!string.IsNullOrEmpty(Request.Params["projectId"]))  ///是否文件柜查看页面传项目值
+            if (!string.IsNullOrEmpty(this.UnitId))
             {
-                listStr.Add(new SqlParameter("@ProjectId", Request.Params["projectId"]));
+                strSql += " AND T.UnitId = @unitId";
+                listStr.Add(new SqlParameter("@unitId", this.UnitId));
             }
             else
             {
-                listStr.Add(new SqlParameter("@ProjectId", this.CurrUser.LoginProjectId));
+                strSql += " AND T.ProjectId = @projectId";
+                listStr.Add(new SqlParameter("@projectId", this.ProjectId));
             }
-
+            
             if (!string.IsNullOrEmpty(this.txtTitle.Text.Trim()))
             {
                 strSql += " AND Title LIKE @Title";
@@ -62,7 +102,6 @@ namespace FineUIPro.Web.SafetyActivities
             DataTable tb = SQLHelper.GetDataTableRunText(strSql, parameter);
 
             Grid1.RecordCount = tb.Rows.Count;
-            tb = GetFilteredTable(Grid1.FilteredData, tb);
             var table = this.GetPagedDataTable(Grid1, tb);
             Grid1.DataSource = table;
             Grid1.DataBind();
@@ -86,7 +125,6 @@ namespace FineUIPro.Web.SafetyActivities
         /// <param name="e"></param>
         protected void ddlPageSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Grid1.PageSize = Convert.ToInt32(this.ddlPageSize.SelectedValue);
             BindGrid();
         }
 
@@ -114,7 +152,17 @@ namespace FineUIPro.Web.SafetyActivities
         }
         #endregion
 
-        #region 编辑
+        #region gv Event
+        /// <summary>
+        ///  新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnNew_Click(object sender, EventArgs e)
+        {
+            PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("ThemeActivitiesEdit.aspx?UnitId={0}", this.UnitId, "新增 - ")));
+        }
+
         /// <summary>
         /// 双击事件
         /// </summary>
@@ -145,19 +193,14 @@ namespace FineUIPro.Web.SafetyActivities
                 Alert.ShowInTop("请至少选择一条记录！", MessageBoxIcon.Warning);
                 return;
             }
-            string id = Grid1.SelectedRowID;
-            var meeting = BLL.ThemeActivitiesService.GetThemeActivitiesById(id);
-            if (meeting != null)
+            if (this.btnMenuEdit.Hidden || (string.IsNullOrEmpty(this.CurrUser.LoginProjectId) && !string.IsNullOrEmpty(this.ProjectId)))   ////双击事件 编辑权限有：编辑页面，无：查看页面 或者状态是完成时查看页面
             {
-                if (this.btnMenuEdit.Hidden)   ////双击事件 编辑权限有：编辑页面，无：查看页面 或者状态是完成时查看页面
-                {
-                    PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("ThemeActivitiesView.aspx?ThemeActivitiesId={0}", id, "查看 - ")));                    
-                }
-                else
-                {
-                    PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("ThemeActivitiesEdit.aspx?ThemeActivitiesId={0}", id, "编辑 - ")));
-                }
-            }            
+                PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("ThemeActivitiesView.aspx?ThemeActivitiesId={0}", Grid1.SelectedRowID, "查看 - ")));
+            }
+            else
+            {
+                PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("ThemeActivitiesEdit.aspx?ThemeActivitiesId={0}", Grid1.SelectedRowID, "编辑 - ")));
+            }
         }
         #endregion
 
@@ -200,7 +243,16 @@ namespace FineUIPro.Web.SafetyActivities
             {
                 return;
             }
-            var buttonList = BLL.CommonService.GetAllButtonList(this.CurrUser.LoginProjectId, this.CurrUser.UserId, BLL.Const.ProjectThemeActivitiesMenuId);
+
+            if (string.IsNullOrEmpty(this.CurrUser.LoginProjectId) && !string.IsNullOrEmpty(this.ProjectId))
+            {
+                this.btnNew.Hidden = true;              
+                this.btnMenuDelete.Hidden = true;
+                return;
+            }
+
+            string menuId = !string.IsNullOrEmpty(this.CurrUser.LoginProjectId) ? Const.ProjectThemeActivitiesMenuId : Const.ServerThemeActivitiesMenuId;
+            var buttonList = BLL.CommonService.GetAllButtonList(this.CurrUser.LoginProjectId, this.CurrUser.UserId, menuId);            
             if (buttonList.Count() > 0)
             {
                 if (buttonList.Contains(BLL.Const.BtnAdd))
@@ -231,7 +283,7 @@ namespace FineUIPro.Web.SafetyActivities
             Response.AddHeader("content-disposition", "attachment; filename=" + System.Web.HttpUtility.UrlEncode("主题安全活动" + filename, System.Text.Encoding.UTF8) + ".xls");
             Response.ContentType = "application/excel";
             Response.ContentEncoding = System.Text.Encoding.UTF8;
-            this.Grid1.PageSize = 5000;
+            this.Grid1.PageSize = this.Grid1.RecordCount; ;
             this.BindGrid();
             Response.Write(GetGridTableHtml(Grid1));
             Response.End();
@@ -274,5 +326,30 @@ namespace FineUIPro.Web.SafetyActivities
             return sb.ToString();
         }
         #endregion
+
+        protected void tvProjectAndUnit_NodeCommand(object sender, TreeCommandEventArgs e)
+        {
+            this.UnitId = string.Empty;
+            this. ProjectId = string.Empty;
+            if (this.tvProjectAndUnit != null && !string.IsNullOrEmpty(this.tvProjectAndUnit.SelectedNodeID))
+            {
+                if (this.tvProjectAndUnit.SelectedNode.ParentNode == null)
+                {
+                    this.UnitId = this.tvProjectAndUnit.SelectedNodeID;
+                }
+                else
+                {
+                    this.ProjectId = this.tvProjectAndUnit.SelectedNodeID;
+                }
+
+                this.BindGrid();
+                GetButtonPower();
+            }
+        }
+
+        protected void Window1_Close(object sender, WindowCloseEventArgs e)
+        {
+            this.BindGrid();
+        }
     }
 }

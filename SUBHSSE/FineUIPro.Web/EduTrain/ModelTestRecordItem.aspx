@@ -26,7 +26,7 @@
             <f:Grid ID="Grid1" ShowBorder="true" ShowHeader="false" Title="考试记录" EnableCollapse="true"
                 runat="server" BoxFlex="1" DataKeyNames="ModelTestRecordItemId" AllowCellEditing="true"
                 EnableColumnLines="true" ClicksToEdit="2" DataIDField="ModelTestRecordItemId" AllowSorting="true"
-                SortField="TestType" SortDirection="ASC" OnSort="Grid1_Sort" AllowPaging="true"
+                SortField="TestType,ModelTestRecordItemId" SortDirection="ASC" OnSort="Grid1_Sort" AllowPaging="true"
                 IsDatabasePaging="true" PageSize="15" OnPageIndexChange="Grid1_PageIndexChange"
                 EnableRowDoubleClickEvent="true" OnRowDoubleClick="Grid1_RowDoubleClick" EnableTextSelection="True">
                 <Toolbars>

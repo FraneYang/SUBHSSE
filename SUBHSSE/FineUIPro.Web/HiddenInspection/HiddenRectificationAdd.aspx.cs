@@ -68,26 +68,17 @@ namespace FineUIPro.Web.HiddenInspection
             if (!IsPostBack)
             {
                 this.btnClose.OnClientClick = ActiveWindow.GetHideReference();
-                this.drpUnit.DataTextField = "UnitName";
-                this.drpUnit.DataValueField = "UnitId";
-                this.drpUnit.DataSource = BLL.UnitService.GetUnitListByProjectId(this.CurrUser.LoginProjectId);
-                this.drpUnit.DataBind();
-                Funs.FineUIPleaseSelect(this.drpUnit);
-                this.drpWorkArea.DataTextField = "WorkAreaName";
-                this.drpWorkArea.DataValueField = "WorkAreaId";
-                Funs.FineUIPleaseSelect(this.drpWorkArea);
-                this.drpResponsibleMan.DataTextField = "UserName";
-                this.drpResponsibleMan.DataValueField = "UserId";
+       
+                UnitService.InitUnitDropDownList(this.drpUnit, this.CurrUser.LoginProjectId, true);     
+                Funs.FineUIPleaseSelect(this.drpWorkArea);                   
                 Funs.FineUIPleaseSelect(this.drpResponsibleMan);
-                this.drpRegisterTypes.DataTextField = "RegisterTypesName";
-                this.drpRegisterTypes.DataValueField = "RegisterTypesId";
-                this.drpRegisterTypes.DataSource = BLL.HSSE_Hazard_HazardRegisterTypesService.GetHazardRegisterTypesList("1");  //安全巡检类型
-                this.drpRegisterTypes.DataBind();
-                this.HazardRegisterId = Request.Params["HazardRegisterId"];
-                //新增初始化
-                this.txtCheckManName.Text = this.CurrUser.UserName;
-                this.hdCheckManId.Text = this.CurrUser.UserId;
+                //安全巡检类型
+                HSSE_Hazard_HazardRegisterTypesService.InitHazardRegisterTypesDropDownList(this.drpRegisterTypes, "1", false);
+                UserService.InitUserDropDownList(this.drpCheckManName, this.CurrUser.LoginProjectId, false);
+                this.drpCheckManName.SelectedValue = this.CurrUser.UserId;
                 this.txtCheckTime.Text = string.Format("{0:yyyy-MM-dd}", DateTime.Now);
+
+                this.HazardRegisterId = Request.Params["HazardRegisterId"];          
                 if (!string.IsNullOrEmpty(this.HazardRegisterId))
                 {
                     Model.View_Hazard_HazardRegister registration = (from x in BLL.Funs.DB.View_Hazard_HazardRegister where x.HazardRegisterId == HazardRegisterId select x).FirstOrDefault();
@@ -96,25 +87,28 @@ namespace FineUIPro.Web.HiddenInspection
                         if (!string.IsNullOrEmpty(registration.ResponsibleUnit))
                         {
                             this.drpUnit.SelectedValue = registration.ResponsibleUnit;
-                            this.drpWorkArea.DataSource = BLL.WorkAreaService.GetWorkAreaByProjectList(this.CurrUser.LoginProjectId);
-                            this.drpWorkArea.DataBind();
-                            this.drpResponsibleMan.DataSource = from x in Funs.DB.Sys_User
-                                                                join y in Funs.DB.Project_ProjectUser
-                                                                on x.UserId equals y.UserId
-                                                                where y.ProjectId == this.CurrUser.LoginProjectId && x.UnitId == this.drpUnit.SelectedValue
-                                                                select x;
-                            this.drpResponsibleMan.DataBind();
-                            this.drpWorkArea.SelectedValue = BLL.Const._Null;
-                            this.drpResponsibleMan.SelectedValue = BLL.Const._Null;
+                            this.drpWorkArea.Items.Clear();
+                            this.drpResponsibleMan.Items.Clear();
+                            WorkAreaService.InitWorkAreaProjetcUnitDropDownList(this.drpWorkArea, this.CurrUser.LoginProjectId, this.drpUnit.SelectedValue, true);
+                            if (!string.IsNullOrEmpty(registration.Place))
+                            {
+                                this.drpWorkArea.SelectedValue = registration.Place;
+                            }
+                            else
+                            {
+                                this.drpWorkArea.SelectedValue = BLL.Const._Null;
+                            }
+                            UserService.InitUserProjectIdUnitIdDropDownList(this.drpResponsibleMan, this.CurrUser.LoginProjectId, this.drpUnit.SelectedValue, true);
+                            if (!string.IsNullOrEmpty(registration.RegisterTypesId))
+                            {
+                                this.drpRegisterTypes.SelectedValue = registration.RegisterTypesId;
+                            }
+                            else
+                            {
+                                this.drpResponsibleMan.SelectedValue = BLL.Const._Null;
+                            }
                         }
-                        if (!string.IsNullOrEmpty(registration.Place))
-                        {
-                            this.drpWorkArea.SelectedValue = registration.Place;
-                        }
-                        if (!string.IsNullOrEmpty(registration.RegisterTypesId))
-                        {
-                            this.drpRegisterTypes.SelectedValue = registration.RegisterTypesId;
-                        }
+               
                         if (!string.IsNullOrEmpty(registration.CheckCycle))
                         {
                             this.ckType.SelectedValue = registration.CheckCycle;
@@ -129,8 +123,7 @@ namespace FineUIPro.Web.HiddenInspection
                         }
                         this.txtRegisterDef.Text = registration.RegisterDef;
                         this.txtCutPayment.Text = registration.CutPayment.ToString();
-                        this.txtCheckManName.Text = registration.CheckManName;
-                        this.hdCheckManId.Text = registration.CheckManId;
+                        this.drpCheckManName.SelectedValue = registration.CheckManId;
                         if (registration.CheckTime != null)
                         {
                             this.txtCheckTime.Text = string.Format("{0:yyyy-MM-dd HH:mm:ss}", registration.CheckTime);
@@ -155,20 +148,9 @@ namespace FineUIPro.Web.HiddenInspection
         {
             this.drpWorkArea.Items.Clear();
             this.drpResponsibleMan.Items.Clear();
-            if (this.drpUnit.SelectedValue != BLL.Const._Null)
-            {
-                this.drpWorkArea.DataSource = BLL.WorkAreaService.GetWorkAreaByProjectList(this.CurrUser.LoginProjectId);
-                this.drpWorkArea.DataBind();
-                this.drpResponsibleMan.DataSource = from x in Funs.DB.Sys_User
-                                                    join y in Funs.DB.Project_ProjectUser
-                                                    on x.UserId equals y.UserId
-                                                    where y.ProjectId == this.CurrUser.LoginProjectId && x.UnitId == this.drpUnit.SelectedValue
-                                                    select x;
-                this.drpResponsibleMan.DataBind();
-            }
-            Funs.FineUIPleaseSelect(this.drpWorkArea);
-            Funs.FineUIPleaseSelect(this.drpResponsibleMan);
+            WorkAreaService.InitWorkAreaProjetcUnitDropDownList(this.drpWorkArea, this.CurrUser.LoginProjectId, this.drpUnit.SelectedValue, true);
             this.drpWorkArea.SelectedValue = BLL.Const._Null;
+            UserService.InitUserProjectIdUnitIdDropDownList(this.drpResponsibleMan, this.CurrUser.LoginProjectId, this.drpUnit.SelectedValue, true);
             this.drpResponsibleMan.SelectedValue = BLL.Const._Null;
         }
 
@@ -192,7 +174,7 @@ namespace FineUIPro.Web.HiddenInspection
                     ShowNotify("请选择作业区域！", MessageBoxIcon.Warning);
                     return;
                 }
-                if (this.drpWorkArea.SelectedValue == BLL.Const._Null)
+                if (this.drpResponsibleMan.SelectedValue == BLL.Const._Null)
                 {
                     ShowNotify("请选择责任人！", MessageBoxIcon.Warning);
                     return;
@@ -232,7 +214,11 @@ namespace FineUIPro.Web.HiddenInspection
                 register.ResponsibleMan = this.drpResponsibleMan.SelectedValue;
             }
             register.RectificationPeriod = Funs.GetNewDateTime(this.txtRectificationPeriod.Text.Trim() + " 18:00:00");
-            register.CheckManId = this.hdCheckManId.Text;
+            if (!string.IsNullOrEmpty(this.drpCheckManName.SelectedValue))
+            {
+                register.CheckManId = this.drpCheckManName.SelectedValue;
+            }
+           
             register.CutPayment = Funs.GetNewIntOrZero(this.txtCutPayment.Text.Trim());
             register.States = "1";    //待整改
             if (!string.IsNullOrEmpty(HazardRegisterId))

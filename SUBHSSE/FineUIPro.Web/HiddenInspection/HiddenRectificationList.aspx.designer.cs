@@ -292,15 +292,6 @@ namespace FineUIPro.Web.HiddenInspection {
         protected global::FineUIPro.Window Window1;
         
         /// <summary>
-        /// Window2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.Window Window2;
-        
-        /// <summary>
         /// Window3 控件。
         /// </summary>
         /// <remarks>
@@ -308,15 +299,6 @@ namespace FineUIPro.Web.HiddenInspection {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::FineUIPro.Window Window3;
-        
-        /// <summary>
-        /// Window4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.Window Window4;
         
         /// <summary>
         /// Window5 控件。

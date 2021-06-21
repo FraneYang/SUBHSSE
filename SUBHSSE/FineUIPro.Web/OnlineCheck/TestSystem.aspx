@@ -107,7 +107,8 @@
             <Items>
                   <f:Panel ID="Panel2" runat="server"  TableColspan="4" Layout="HBox"   ShowHeader="false" ShowBorder="false">
                     <Items>
-                        <f:Timer ID="Timer1" Interval="10" Enabled="false" OnTick="Timer1_Tick" EnableAjaxLoading="false" runat="server"></f:Timer>
+                        <f:Timer ID="Timer1" Interval="10" Enabled="false" OnTick="Timer1_Tick" 
+                            EnableAjaxLoading="false" runat="server"></f:Timer>
                         <f:Label id="lblStartTime" runat="server"  Width="180px" CssClass="Lable" ></f:Label>
                         <f:Label id="lblEndTime" runat="server" Width="180px" CssClass="Lable" ></f:Label>
                         <f:Label id="lblCurretTime" runat="server" Width="180px" CssClass="Lable"></f:Label>

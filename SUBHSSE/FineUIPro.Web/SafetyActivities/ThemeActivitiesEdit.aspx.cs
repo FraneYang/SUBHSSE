@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using BLL;
+using System;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using BLL;
 
 namespace FineUIPro.Web.SafetyActivities
 {
@@ -39,6 +35,21 @@ namespace FineUIPro.Web.SafetyActivities
                 ViewState["ProjectId"] = value;
             }
         }
+
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public string UnitId
+        {
+            get
+            {
+                return (string)ViewState["UnitId"];
+            }
+            set
+            {
+                ViewState["UnitId"] = value;
+            }
+        }
         #endregion
 
         #region 加载
@@ -52,29 +63,31 @@ namespace FineUIPro.Web.SafetyActivities
             if (!IsPostBack)
             {
                 this.ProjectId = this.CurrUser.LoginProjectId;
+                this.UnitId = Request.Params["UnitId"];
                 this.btnClose.OnClientClick = ActiveWindow.GetHideReference();
                 this.InitDropDownList();
   
                 this.ThemeActivitiesId = Request.Params["ThemeActivitiesId"];
                 if (!string.IsNullOrEmpty(this.ThemeActivitiesId))
                 {
-                    Model.SafetyActivities_ThemeActivities ThemeActivities = BLL.ThemeActivitiesService.GetThemeActivitiesById(this.ThemeActivitiesId);
-                    if (ThemeActivities != null)
+                   var getData = BLL.ThemeActivitiesService.GetThemeActivitiesById(this.ThemeActivitiesId);
+                    if (getData != null)
                     {
-                        this.ProjectId = ThemeActivities.ProjectId;
+                        this.ProjectId = getData.ProjectId;
+                        this.UnitId = getData.UnitId;
                         if (this.ProjectId != this.CurrUser.LoginProjectId)
                         {
                             this.InitDropDownList();
                         }
 
-                        this.txtTitle.Text = ThemeActivities.Title;
-                        this.txtCompileDate.Text = string.Format("{0:yyyy-MM-dd}", ThemeActivities.CompileDate);
-                        if (!string.IsNullOrEmpty(ThemeActivities.CompileMan))
+                        this.txtTitle.Text = getData.Title;
+                        this.txtCompileDate.Text = string.Format("{0:yyyy-MM-dd}", getData.CompileDate);
+                        if (!string.IsNullOrEmpty(getData.CompileMan))
                         {
-                            this.drpCompileMan.SelectedValue = ThemeActivities.CompileMan;
+                            this.drpCompileMan.SelectedValue = getData.CompileMan;
                         }
-                        this.txtRemark.Text = ThemeActivities.Remark;                       
-                        this.txtSeeFile.Text = HttpUtility.HtmlDecode(ThemeActivities.SeeFile);                                               
+                        this.txtRemark.Text = getData.Remark;                       
+                        this.txtSeeFile.Text = HttpUtility.HtmlDecode(getData.SeeFile);                                               
                     }
                 }
                 else
@@ -98,7 +111,8 @@ namespace FineUIPro.Web.SafetyActivities
         /// </summary>
         private void InitDropDownList()
         {
-            BLL.UserService.InitUserDropDownList(this.drpCompileMan, this.ProjectId, true);
+            UserService.InitFlowOperateControlUserDropDownList(this.drpCompileMan, this.ProjectId,this.UnitId, true);
+            this.drpCompileMan.SelectedValue = this.CurrUser.UserId;
         }
 
         #region 保存
@@ -110,7 +124,7 @@ namespace FineUIPro.Web.SafetyActivities
         protected void btnSave_Click(object sender, EventArgs e)
         {           
             this.SaveData(BLL.Const.BtnSave);
-            PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
+            PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
         }
         
         /// <summary>
@@ -122,6 +136,7 @@ namespace FineUIPro.Web.SafetyActivities
             Model.SafetyActivities_ThemeActivities newThemeActivities = new Model.SafetyActivities_ThemeActivities
             {
                 ProjectId = this.ProjectId,
+                UnitId=this.UnitId,
                 Title = this.txtTitle.Text.Trim(),
                 CompileDate = Funs.GetNewDateTime(this.txtCompileDate.Text.Trim())
             };
@@ -159,6 +174,7 @@ namespace FineUIPro.Web.SafetyActivities
             {
                 SaveData(BLL.Const.BtnSave);
             }
+
             PageContext.RegisterStartupScript(WindowAtt.GetShowReference(String.Format("../AttachFile/webuploader.aspx?toKeyId={0}&path=FileUpload/ThemeActivitiesAttachUrl&menuId={1}", ThemeActivitiesId,BLL.Const.ProjectThemeActivitiesMenuId)));
         }
         #endregion

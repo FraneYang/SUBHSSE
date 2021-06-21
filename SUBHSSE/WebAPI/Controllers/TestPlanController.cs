@@ -253,24 +253,24 @@ namespace WebAPI.Controllers
                                         int sumTestType2Count = testPlanTrainings.Sum(x => x.TestType2Count) ?? 0;
                                         int sumTestType3Count = testPlanTrainings.Sum(x => x.TestType3Count) ?? 0;
 
-                                        IQueryable<Model.Training_TestTrainingItem> getTestTrainingItemALLs = null;  
+                                        List<Model.Training_TestTrainingItem> getTestTrainingItemALLs = null;  
                                         ////获取类型下适合岗位试题集合
                                        // List<Model.Training_TestTrainingItem> getTestTrainingItemALLs = new List<Model.Training_TestTrainingItem>();
                                         if (!string.IsNullOrEmpty(getTestPlan.ProjectId))
                                         {
-                                            getTestTrainingItemALLs = from x in db.Training_TestTrainingItem
+                                            getTestTrainingItemALLs = (from x in db.Training_TestTrainingItem
                                                                        join y in db.Training_TestTraining on x.TrainingId equals y.TrainingId
                                                                        where y.ProjectId.Contains(getTestRecord.ProjectId) && x.TrainingId != null
                                                                        && (x.WorkPostIds == null || (x.WorkPostIds.Contains(person.WorkPostId) && person.WorkPostId != null))
-                                                                       select x;
+                                                                       select x).ToList();
                                         }
                                         else
                                         {
-                                            getTestTrainingItemALLs = from x in db.Training_TestTrainingItem
+                                            getTestTrainingItemALLs = (from x in db.Training_TestTrainingItem
                                                                        join y in db.Training_TestTraining on x.TrainingId equals y.TrainingId
                                                                        where y.ProjectId == null && x.TrainingId != null
                                                                        && (x.WorkPostIds == null || (x.WorkPostIds.Contains(person.WorkPostId) && person.WorkPostId != null))
-                                                                       select x;
+                                                                       select x).ToList();
                                         }
 
                                         foreach (var itemT in testPlanTrainings)

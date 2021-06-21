@@ -33,6 +33,7 @@ namespace BLL
             {
                 SafetyMonthId = SafetyMonth.SafetyMonthId,
                 ProjectId = SafetyMonth.ProjectId,
+                UnitId = SafetyMonth.UnitId,
                 Title = SafetyMonth.Title,
                 CompileDate = SafetyMonth.CompileDate,
                 CompileMan = SafetyMonth.CompileMan,
@@ -40,7 +41,6 @@ namespace BLL
                 AttachUrl = SafetyMonth.AttachUrl,
                 SeeFile = SafetyMonth.SeeFile
             };
-
             db.SafetyActivities_SafetyMonth.InsertOnSubmit(newSafetyMonth);
             db.SubmitChanges();
         }

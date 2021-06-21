@@ -316,7 +316,7 @@ namespace WebAPI.Controllers
                         {
                             getItem.SubjectScore = 0;
                             getItem.SelectedItem = selectedItem;
-                            if (!string.IsNullOrEmpty(selectedItem))
+                            if (!string.IsNullOrEmpty(selectedItem) && !string.IsNullOrEmpty(getItem.AnswerItems))
                             {
                                 if (getItem.AnswerItems == selectedItem)
                                 {

@@ -66,7 +66,7 @@ namespace FineUIPro.Web.EduTrain
             //}
             if (!string.IsNullOrEmpty(this.txtName.Text.Trim()))
             {
-                strSql += " AND (person.PersonName LIKE @TestManName OR Training.TrainingName LIKE @TestManName)";
+                strSql += " AND (person.PersonName LIKE @TestManName)";
                 listStr.Add(new SqlParameter("@TestManName", "%" + this.txtName.Text.Trim() + "%"));
             }
             if (!string.IsNullOrEmpty(this.txtMinScores.Text.Trim()))

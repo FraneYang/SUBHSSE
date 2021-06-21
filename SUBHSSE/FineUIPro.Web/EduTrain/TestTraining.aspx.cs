@@ -18,6 +18,7 @@ namespace FineUIPro.Web.EduTrain
         {
             if (!IsPostBack)
             {
+                Funs.DropDownPageSize(this.ddlPageSize);
                 this.GetButtonPower();
                 this.InitTreeMenu();
             }
@@ -50,16 +51,22 @@ namespace FineUIPro.Web.EduTrain
         /// <param name="nodes"></param>
         /// <param name="parentId"></param>
         private void BoundTree(TreeNodeCollection nodes, string parentId)
-        {
-            string pname = "公司";
+        {          
             List<Model.Training_TestTraining> getTests = new List<Model.Training_TestTraining>();
             if (!string.IsNullOrEmpty(this.CurrUser.LoginProjectId))
             {
-                getTests = TestTrainingService.GetTestTrainingListBySupTrainingId(parentId, this.CurrUser.LoginProjectId);
+                getTests = TestTrainingService.GetTestTrainingListBySupTrainingIdProjectId(parentId, this.CurrUser.LoginProjectId);
             }
             else
             {
-                getTests = TestTrainingService.GetTestTrainingListBySupTrainingId(parentId);
+                if (CommonService.GetIsThisUnit(this.CurrUser.UnitId) || this.CurrUser.UserId == Const.sysglyId || this.CurrUser.UserId == Const.hfnbdId)
+                {
+                    getTests = TestTrainingService.GetTestTrainingListBySupTrainingId(parentId);
+                }
+                else
+                {
+                    getTests = TestTrainingService.GetTestTrainingListBySupTrainingIdUnitId(parentId, this.CurrUser.UnitId);
+                }
             }
 
             if (getTests.Count() > 0)
@@ -67,9 +74,18 @@ namespace FineUIPro.Web.EduTrain
                 TreeNode tn = null;
                 foreach (var dr in getTests)
                 {
+                    string pname = "适用于：";
+                    if (!string.IsNullOrEmpty(dr.CompanyId))
+                    {
+                        pname += UnitService.GetUnitNameByUnitId(dr.CompanyId) +"</br>";
+                    }
+                    if (!string.IsNullOrEmpty(dr.UnitIds))
+                    {
+                        pname += UnitService.getUnitNamesUnitIds(dr.UnitIds) + "</br>";
+                    }
                     if (!string.IsNullOrEmpty(dr.ProjectId))
                     {
-                        pname = ProjectService.GetProjectNamesByProjectIds(dr.ProjectId);
+                        pname += ProjectService.GetProjectNames2ByProjectIds(dr.ProjectId);
                     }
                     string name = dr.TrainingName;
                     if (!string.IsNullOrEmpty(dr.TrainingCode))
@@ -81,7 +97,7 @@ namespace FineUIPro.Web.EduTrain
                         Text = name,
                         NodeID = dr.TrainingId,
                         EnableClickEvent = true,
-                        ToolTip = pname + "：" + dr.TrainingName,
+                        ToolTip = pname,
                     };
                     nodes.Add(tn);
                     ///是否存在下级节点
@@ -118,13 +134,26 @@ namespace FineUIPro.Web.EduTrain
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnTreeMenuEdit_Click(object sender, EventArgs e)
         {
             if (this.tvTestTraining.SelectedNode != null)
             {
-                if (this.tvTestTraining.SelectedNode.NodeID != "0")   //非根节点可以编辑
+                string trainingId = this.tvTestTraining.SelectedNode.NodeID;
+                if (trainingId != "0")   //非根节点可以编辑
                 {
-                    PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("TestTrainingSave.aspx?TrainingId={0}", this.tvTestTraining.SelectedNode.NodeID, "编辑 - ")));
+                    if (getPower(trainingId))
+                    {
+                        PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("TestTrainingSave.aspx?TrainingId={0}", trainingId, "编辑 - ")));
+                    }
+                    else
+                    {
+                        PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("TestTrainingView.aspx?TrainingId={0}", trainingId, "查看 - ")));
+                    }
                 }
                 else
                 {
@@ -137,21 +166,97 @@ namespace FineUIPro.Web.EduTrain
             }
         }
 
+        protected void btnFind_Click(object sender, EventArgs e)
+        {
+            string trainingId = this.tvTestTraining.SelectedNode.NodeID;
+            PageContext.RegisterStartupScript(Window1.GetShowReference(String.Format("TestTrainingView.aspx?TrainingId={0}", trainingId, "查看 - ")));
+        }
+
+        /// <summary>
+        /// 树节点删除
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnTreeMenuDelete_Click(object sender, EventArgs e)
         {
             if (this.tvTestTraining.SelectedNode != null && this.tvTestTraining.SelectedNodeID != "0")
             {
-                var edu = Funs.DB.Training_TestTraining.FirstOrDefault(x => x.SupTrainingId == this.tvTestTraining.SelectedNode.NodeID);
-                if (edu == null)
+                string trainingId = this.tvTestTraining.SelectedNode.NodeID;
+                if (getPower(trainingId))
                 {
-                    BLL.TestTrainingService.DeleteTestTrainingById(this.tvTestTraining.SelectedNode.NodeID);
-                    InitTreeMenu();
-                    Grid1.DataSource = null;
-                    Grid1.DataBind();
+                    var edu = Funs.DB.Training_TestTraining.FirstOrDefault(x => x.SupTrainingId == trainingId);
+                    if (edu == null)
+                    {
+                        var getModelTestRecord = Funs.DB.Training_ModelTestRecordTraining.FirstOrDefault(x => x.TrainingId == trainingId);
+                        if (getModelTestRecord != null)
+                        {
+                            var getModes = (from x in Funs.DB.Training_ModelTestRecordTraining
+                                            join y in Funs.DB.Training_ModelTestRecord on x.ModelTestRecordId equals y.ModelTestRecordId
+                                            where x.TrainingId == trainingId
+                                            select y).Distinct();
+                            string info = "模拟考试：";
+                            foreach (var item in getModes)
+                            {
+                                if (!string.IsNullOrEmpty(item.ProjectId))
+                                {
+                                    info += ProjectService.GetProjectNameByProjectId(item.ProjectId) ?? "公司";
+                                }
+                                if (!string.IsNullOrEmpty(item.TestManId))
+                                {
+                                    info += "  姓名：" + PersonService.GetPersonNameById(item.TestManId);
+                                }
+                                if (item.TestStartTime.HasValue)
+                                {
+                                    info += "  时间：" + string.Format("{0:yyyy-MM-dd HH:mm}", item.TestStartTime);
+                                }
+                                info += "</br>";
+                            }
+                            Alert.ShowInTop(info + "已使用该类型！", MessageBoxIcon.Warning);
+                            return;
+                        }
+                        var getTestPlanTraining = Funs.DB.Training_TestPlanTraining.FirstOrDefault(x => x.TrainingId == trainingId);
+                        if (getTestPlanTraining != null)
+                        {
+                            var getTestPlans = (from x in Funs.DB.Training_TestPlanTraining
+                                                join y in Funs.DB.Training_TestPlan on x.TestPlanId equals y.TestPlanId
+                                                where x.TrainingId == trainingId
+                                                select y).Distinct();
+                            string info = "考试计划：";
+                            foreach (var item in getTestPlans)
+                            {
+                                if (!string.IsNullOrEmpty(item.ProjectId))
+                                {
+                                    info += ProjectService.GetProjectNameByProjectId(item.ProjectId) ?? "公司";
+                                }
+                                if (!string.IsNullOrEmpty(item.PlanCode))
+                                {
+                                    info += "  编号：" + item.PlanCode;
+                                }
+                                if (item.PlanDate.HasValue)
+                                {
+                                    info += "  计划时间：" + string.Format("{0:yyyy-MM-dd HH:mm}", item.PlanDate);
+                                }
+                                info += "</br>";
+                            }
+                            Alert.ShowInTop(info + "已使用该类型！", MessageBoxIcon.Warning);
+                            return;
+                        }
+                        else
+                        {
+                            BLL.TestTrainingService.DeleteTestTrainingById(trainingId);
+                            InitTreeMenu();
+                            Grid1.DataSource = null;
+                            Grid1.DataBind();
+                        }
+                    }
+                    else
+                    {
+                        ShowNotify("存在子目录，不能删除！", MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    ShowNotify("存在子目录，不能删除！", MessageBoxIcon.Warning);
+                    ShowNotify("您没有权限删除！", MessageBoxIcon.Warning);
                 }
             }
             else
@@ -160,6 +265,53 @@ namespace FineUIPro.Web.EduTrain
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private bool getPower(string trainingId)
+        {
+            bool isOk = false;
+            if (CommonService.IsMainUnitOrAdmin(this.CurrUser.UserId))
+            {
+                isOk = true;
+            }
+            else
+            {
+                var edu = Funs.DB.Training_TestTraining.FirstOrDefault(x => x.TrainingId == trainingId);
+                if (string.IsNullOrEmpty(edu.CompanyId) && edu.UnitIds == this.CurrUser.UnitId)
+                {
+                    isOk = true;
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(edu.CompanyId) && string.IsNullOrEmpty(edu.UnitIds) && !string.IsNullOrEmpty(edu.ProjectId))
+                    {
+                        if (edu.ProjectId == this.CurrUser.LoginProjectId)
+                        {
+                            isOk = true;
+                        }
+                        else
+                        {
+                            var sp = Funs.GetStrListByStr(edu.ProjectId, ',');
+                            var getpp = Funs.DB.Base_Project.FirstOrDefault(x => x.UnitId == this.CurrUser.UnitId && sp.Contains(x.ProjectId));
+                            if (getpp != null)
+                            {
+                                isOk = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return isOk;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void tvTestTraining_NodeCommand(object sender, FineUIPro.TreeCommandEventArgs e)
         {
             BindGrid();
@@ -550,6 +702,6 @@ namespace FineUIPro.Web.EduTrain
         protected void ckIsItem_CheckedChanged(object sender, CheckedEventArgs e)
         {
             this.BindGrid();
-        }
+        }      
     }
 }

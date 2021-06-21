@@ -38,6 +38,7 @@ namespace FineUIPro.Web.ServerTest
         {            
             if (!IsPostBack)
             {
+                Funs.DropDownPageSize(this.ddlPageSize);
                 ////权限按钮方法
                 this.GetButtonPower();
                 this.btnMenuDelete.OnClientClick = Grid1.GetNoSelectionAlertReference("请至少选择一项！");
@@ -384,10 +385,12 @@ namespace FineUIPro.Web.ServerTest
                     this.btnNew.Hidden = false;
                     this.btnImport.Hidden = false;
                     this.btnPersonOut.Hidden = false;
+                    this.btnPersonUnit.Hidden = false;
                 }
                 if (buttonList.Contains(BLL.Const.BtnModify))
                 {
                     this.btnMenuEdit.Hidden = false;
+                    this.btnPersonUnit.Hidden = false;
                 }
                 if (buttonList.Contains(BLL.Const.BtnDelete))
                 {
@@ -539,6 +542,23 @@ namespace FineUIPro.Web.ServerTest
                 }
             }
             ShowNotify("操作完成，新生成二维码"+ num.ToString()+"条", MessageBoxIcon.Success);
+        }
+
+        /// <summary>
+        /// 批量单位转换
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnPersonUnit_Click(object sender, EventArgs e)
+        {
+            if (BLL.CommonService.IsMainUnitOrAdmin(this.CurrUser.UserId))
+            {
+                PageContext.RegisterStartupScript(Window3.GetShowReference(String.Format("PersonUnitRefresh.aspx", "批量单位转换 - ")));
+            }
+            else
+            {
+                ShowNotify("非软件管理单位用户，不能调整人员单位!", MessageBoxIcon.Warning);
+            }
         }
     }
 }

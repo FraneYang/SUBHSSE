@@ -33,6 +33,7 @@ namespace BLL
             {
                 FireActivitiesId = FireActivities.FireActivitiesId,
                 ProjectId = FireActivities.ProjectId,
+                UnitId= FireActivities.UnitId,
                 Title = FireActivities.Title,
                 CompileDate = FireActivities.CompileDate,
                 CompileMan = FireActivities.CompileMan,
@@ -40,7 +41,6 @@ namespace BLL
                 AttachUrl = FireActivities.AttachUrl,
                 SeeFile = FireActivities.SeeFile
             };
-
             db.SafetyActivities_FireActivities.InsertOnSubmit(newFireActivities);
             db.SubmitChanges();
         }

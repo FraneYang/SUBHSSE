@@ -32,6 +32,7 @@ namespace BLL
             Model.SafetyActivities_ThemeActivities newThemeActivities = new Model.SafetyActivities_ThemeActivities
             {
                 ThemeActivitiesId = ThemeActivities.ThemeActivitiesId,
+                UnitId= ThemeActivities.UnitId,
                 ProjectId = ThemeActivities.ProjectId,
                 Title = ThemeActivities.Title,
                 CompileDate = ThemeActivities.CompileDate,
@@ -40,7 +41,6 @@ namespace BLL
                 AttachUrl = ThemeActivities.AttachUrl,
                 SeeFile = ThemeActivities.SeeFile
             };
-
             db.SafetyActivities_ThemeActivities.InsertOnSubmit(newThemeActivities);
             db.SubmitChanges();
         }
